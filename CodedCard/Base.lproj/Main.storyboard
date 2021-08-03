@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CYe-hz-nbZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CodedCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN3-RE-cfN">
+                                <rect key="frame" x="99" y="408" width="217" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit Card"/>
+                                <connections>
+                                    <segue destination="L7o-V8-g2z" kind="modal" modalTransitionStyle="coverVertical" id="kMz-kj-ZL5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aGu-W4-K3E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="79.6875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Whx-DY-mtR">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="L7o-V8-g2z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JI3-T2-ciB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxx-Fw-rgY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="J7O-Q3-qR0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1067"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="AIG-Bl-zIF">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="88n-1c-sqC">
+                                                <rect key="frame" x="0.0" y="113.5" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="d1s-dL-eQf">
+                                                <rect key="frame" x="0.0" y="227" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Byp-3s-Avp">
+                                                <rect key="frame" x="0.0" y="340.5" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="66F-u3-4Y0">
+                                                <rect key="frame" x="0.0" y="454" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="wSI-yz-dEn">
+                                                <rect key="frame" x="0.0" y="567.5" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-9z-aGc">
+                                                <rect key="frame" x="0.0" y="681" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="g3x-rU-Qua">
+                                                <rect key="frame" x="0.0" y="794.5" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="P7b-8j-dSr">
+                                                <rect key="frame" x="0.0" y="908" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669014087" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="zfV-wP-EIB">
+                                                <rect key="frame" x="0.0" y="1021.5" width="414" height="45.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="0.84658340669999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J7O-Q3-qR0" firstAttribute="leading" secondItem="qC0-yw-6KG" secondAttribute="leading" id="8US-Yk-yi0"/>
+                                    <constraint firstItem="J7O-Q3-qR0" firstAttribute="top" secondItem="qC0-yw-6KG" secondAttribute="top" id="Kxm-fl-aaU"/>
+                                    <constraint firstItem="qC0-yw-6KG" firstAttribute="trailing" secondItem="J7O-Q3-qR0" secondAttribute="trailing" id="sBU-H4-1dw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="V2h-Hk-iO3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qC0-yw-6KG"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gEn-1J-C48"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Sxx-Fw-rgY" firstAttribute="centerX" secondItem="JI3-T2-ciB" secondAttribute="centerX" id="Bed-9f-OUu"/>
+                            <constraint firstItem="Sxx-Fw-rgY" firstAttribute="leading" secondItem="gEn-1J-C48" secondAttribute="leading" id="miL-2k-yCQ"/>
+                            <constraint firstItem="Sxx-Fw-rgY" firstAttribute="top" secondItem="gEn-1J-C48" secondAttribute="top" id="ugI-kN-phc"/>
+                            <constraint firstItem="Sxx-Fw-rgY" firstAttribute="bottom" secondItem="gEn-1J-C48" secondAttribute="bottom" id="w8a-gU-3XD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zLg-Mk-oCj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtO-ZS-MUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689.8550724637682" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="teU-h7-1os">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lhg-5O-cWf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ksK-sh-DeS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uhu-4C-y8w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4n-bX-FBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="79.6875"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="Hdb-1m-6Dd">
+            <objects>
+                <viewController id="yJ2-lf-BtE" customClass="InfoViewController" customModule="CodedCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4vX-B9-psS"/>
+                        <viewControllerLayoutGuide type="bottom" id="8mn-jV-df6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rpo-fX-Qso">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="1Le-DQ-hLc">
+                                <rect key="frame" x="20" y="0.0" width="374" height="705"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-gt-Sbx">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="1778"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rih-q3-x0M">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="hzA-Uq-5C3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="yUc-Cz-vMU"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0tf-uD-FIN">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="67J-Jr-wTE"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Fx-oM-1pO">
+                                                <rect key="frame" x="0.0" y="87" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="ZYU-1g-NRO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="MIs-XZ-Zqt"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mvn-VY-7Ha">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="8Zu-Nv-cc3"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MAB-ZZ-8Ux">
+                                                <rect key="frame" x="0.0" y="174" width="374" height="60"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BgL-Tb-afb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="60"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="8dk-SC-wAK"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-vx-5l7">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="60"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="3Xj-dG-ntK"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ElU-7V-9Rf">
+                                                <rect key="frame" x="0.0" y="239" width="374" height="60"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="34E-Hv-uvo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="60"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="yFJ-I4-qUc"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Healine" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-dh-mRm">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="60"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Qy9-6Z-47B"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fyZ-UM-goZ">
+                                                <rect key="frame" x="0.0" y="304" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="company" translatesAutoresizingMaskIntoConstraints="NO" id="1d8-76-9MP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="Csh-mD-clg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VLj-fH-Wuu">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="zYi-DF-qgn"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAg-NT-mg7">
+                                                <rect key="frame" x="0.0" y="391" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-Nn-EN5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="y4r-AS-iFh"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="flW-1h-hcW">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="0zk-M8-v4p"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-5j-hwS">
+                                                <rect key="frame" x="0.0" y="478" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="TMA-yg-RKv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="lzP-Uh-b12"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="73d-DD-Jdq">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="s3j-Oj-vyw"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oYK-0M-gRg">
+                                                <rect key="frame" x="0.0" y="565" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="qyy-oU-vxm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="s0g-nO-QFT"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dsn-63-Qen">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="Pfd-ZC-uts"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YDT-r1-Eve">
+                                                <rect key="frame" x="0.0" y="652" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weblink" translatesAutoresizingMaskIntoConstraints="NO" id="mfI-4v-1Zt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="DZy-TU-zb0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Website" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qxj-JT-z9A">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="uDi-VS-U2e"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0yA-EY-xmV">
+                                                <rect key="frame" x="0.0" y="739" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-I6-ypi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="3Ll-a3-vix"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LinkedIn" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DSO-mI-EO4">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="oNv-ZE-vX0"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="F0I-Lv-E6Q">
+                                                <rect key="frame" x="0.0" y="826" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="Mk2-dz-ZcO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="0f3-hK-ZxB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Facebook" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1QZ-Dv-SX8">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="1hs-ub-hhh"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="boi-Hs-FHN">
+                                                <rect key="frame" x="0.0" y="913" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="2Wy-I9-LR2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="Wax-cx-HiZ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Instagram" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VE9-Ns-kSV">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="xsX-md-PSc"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5fS-NP-2n8">
+                                                <rect key="frame" x="0.0" y="1000" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-Rf-eob">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="9D0-Mt-Y4k"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitter" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-TZ-ffy">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="twitter"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="IT1-La-PS1"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yfB-Fb-1LX">
+                                                <rect key="frame" x="0.0" y="1087" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchat" translatesAutoresizingMaskIntoConstraints="NO" id="hWR-A5-khP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="TLG-eL-P31"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Snapchat" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Jzt-Jz-nnM">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="NKC-0k-rbS"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="btV-Ez-7u9">
+                                                <rect key="frame" x="0.0" y="1174" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiktok" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-gT-wfc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="63X-k7-zWB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tiktok" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0um-cp-eIp">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="9Nb-jN-zuk"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nVS-GP-Csx">
+                                                <rect key="frame" x="0.0" y="1261" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-ok-b5U">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="wBh-R9-G0j"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Whatsapp" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="94N-7p-mcY">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="aw2-0O-Av6"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="13a-za-mmL">
+                                                <rect key="frame" x="0.0" y="1348" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="vbG-ay-JQG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="5h2-LT-Bye"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Youtube" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VXX-dg-AkR">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="PSj-Hd-15z"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="35A-Yf-DDD">
+                                                <rect key="frame" x="0.0" y="1435" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cashapp" translatesAutoresizingMaskIntoConstraints="NO" id="lwK-rz-cBG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="Sw9-om-8A0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cash App" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kMC-ld-xll">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="KeO-wp-pX4"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-ET-fYV">
+                                                <rect key="frame" x="0.0" y="1522" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitch" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-X7-O0i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="DUX-TX-ZrH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Twitch" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5JI-KT-thq">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="oiW-Av-FlV"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-5q-hd6">
+                                                <rect key="frame" x="0.0" y="1609" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="wKu-nf-cCx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="juf-Dc-1sb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Github" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0wp-wt-ghS">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="4ms-Ny-tcz"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-DQ-oJ5">
+                                                <rect key="frame" x="0.0" y="1696" width="374" height="82"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soundcloud" translatesAutoresizingMaskIntoConstraints="NO" id="Yae-rg-R0F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="82"/>
+                                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="SEg-Oi-KtU"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Soundcloud" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IgT-XG-l9k">
+                                                        <rect key="frame" x="48" y="0.0" width="326" height="82"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="82" id="j7u-8k-UAr"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Yls-gt-Sbx" firstAttribute="leading" secondItem="1Le-DQ-hLc" secondAttribute="leading" id="1Ta-at-Jbc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yls-gt-Sbx" secondAttribute="bottom" id="Cuv-mc-v7W"/>
+                                    <constraint firstItem="Yls-gt-Sbx" firstAttribute="width" secondItem="1Le-DQ-hLc" secondAttribute="width" id="bUF-Ru-rJD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yls-gt-Sbx" secondAttribute="trailing" id="frS-Yu-XCv"/>
+                                    <constraint firstItem="Yls-gt-Sbx" firstAttribute="top" secondItem="1Le-DQ-hLc" secondAttribute="top" id="ymr-Ly-n4S"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2VQ-7j-sKW"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="8mn-jV-df6" firstAttribute="top" secondItem="1Le-DQ-hLc" secondAttribute="bottom" constant="20" id="cHC-po-oqZ"/>
+                            <constraint firstItem="1Le-DQ-hLc" firstAttribute="leading" secondItem="Rpo-fX-Qso" secondAttribute="leadingMargin" id="jb1-Gf-W0j"/>
+                            <constraint firstItem="1Le-DQ-hLc" firstAttribute="top" secondItem="4vX-B9-psS" secondAttribute="bottom" id="r99-h2-MgN"/>
+                            <constraint firstItem="1Le-DQ-hLc" firstAttribute="trailing" secondItem="Rpo-fX-Qso" secondAttribute="trailingMargin" id="rKr-Uz-3hO"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gtc-ky-8yp">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="yY1-48-3hk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveInfo" destination="yJ2-lf-BtE" id="m2V-WO-DlG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="Dsn-63-Qen" id="GO0-b9-fL1"/>
+                        <outlet property="cashappTextField" destination="kMC-ld-xll" id="coM-7z-LQX"/>
+                        <outlet property="companyTextField" destination="VLj-fH-Wuu" id="wjI-go-ZpH"/>
+                        <outlet property="emailTextField" destination="flW-1h-hcW" id="DVP-K2-Gfb"/>
+                        <outlet property="facebookTextField" destination="1QZ-Dv-SX8" id="whO-LD-pME"/>
+                        <outlet property="githubTextField" destination="0wp-wt-ghS" id="Dot-2T-cgO"/>
+                        <outlet property="headerTextField" destination="Xbi-dh-mRm" id="nUl-XS-P9u"/>
+                        <outlet property="instagramTextField" destination="VE9-Ns-kSV" id="oIc-YL-2iA"/>
+                        <outlet property="linkedinTextField" destination="DSO-mI-EO4" id="bG2-ZS-ekF"/>
+                        <outlet property="nameTextField" destination="Mvn-VY-7Ha" id="p4z-QP-0yp"/>
+                        <outlet property="phoneTextField" destination="73d-DD-Jdq" id="tsJ-sv-rMS"/>
+                        <outlet property="scrollView" destination="1Le-DQ-hLc" id="LDm-fa-b6g"/>
+                        <outlet property="snapchatTextField" destination="Jzt-Jz-nnM" id="7uy-bJ-nQk"/>
+                        <outlet property="soundcloudTextField" destination="IgT-XG-l9k" id="Suc-k4-AHS"/>
+                        <outlet property="tiktokTextField" destination="0um-cp-eIp" id="U5R-i4-MPI"/>
+                        <outlet property="titleTextField" destination="CkL-vx-5l7" id="lYG-Fd-F8I"/>
+                        <outlet property="twitchTextField" destination="5JI-KT-thq" id="1gx-ab-DQH"/>
+                        <outlet property="twitterTextField" destination="8aL-TZ-ffy" id="ctK-XA-Twe"/>
+                        <outlet property="websiteTextField" destination="Qxj-JT-z9A" id="wEs-hm-eyd"/>
+                        <outlet property="whatsappTextField" destination="94N-7p-mcY" id="vfb-ob-cQT"/>
+                        <outlet property="youtubeTextField" destination="VXX-dg-AkR" id="Epf-XB-Uwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJ0-Ht-ggv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="744.64285714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eYW-Xy-Qs1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CYe-hz-nbZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bh0-Rt-WtM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yJ2-lf-BtE" kind="relationship" relationship="rootViewController" id="d3h-2w-hRn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Xz-Nm-jLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="744.64285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cashapp" width="21" height="21"/>
+        <image name="company" width="25" height="23"/>
+        <image name="email" width="22" height="16"/>
+        <image name="facebook" width="23" height="23"/>
+        <image name="github" width="25" height="25"/>
+        <image name="instagram" width="21" height="21"/>
+        <image name="linkedin" width="23" height="23"/>
+        <image name="location" width="14" height="16"/>
+        <image name="phone" width="21" height="20"/>
+        <image name="profile" width="30" height="20"/>
+        <image name="snapchat" width="20" height="18"/>
+        <image name="soundcloud" width="35" height="17"/>
+        <image name="tiktok" width="17" height="19"/>
+        <image name="twitch" width="15" height="17"/>
+        <image name="twitter" width="19" height="15"/>
+        <image name="weblink" width="30" height="30"/>
+        <image name="whatsapp" width="19" height="19"/>
+        <image name="youtube" width="30" height="22"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
