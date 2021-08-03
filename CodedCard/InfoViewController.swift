@@ -178,7 +178,6 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
         } else {
             scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom + 50, right: 0)
         }
-
         scrollView.scrollIndicatorInsets = scrollView.contentInset
     }
     
