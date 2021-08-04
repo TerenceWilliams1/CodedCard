@@ -7,8 +7,9 @@
 
 import UIKit
 import CoreData
+import Photos
 
-class InfoViewController: UIViewController, UITextFieldDelegate {
+class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -72,9 +73,14 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var soundcloudStack: UIStackView!
     @IBOutlet weak var soundcloudTextField: UITextField!
     
+    @IBOutlet weak var avatarStack: UIStackView!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate //Singlton instance
     let context = appDelegate.persistentContainer.viewContext
     var card: [NSManagedObject] = []
+    var imagePicker = UIImagePickerController()
+    var avatarData: Data?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,45 +92,45 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
 
     func setupui() {
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         titleTextField.attributedPlaceholder = NSAttributedString(string: "Title",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         companyTextField.attributedPlaceholder = NSAttributedString(string: "Company",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         headerTextField.attributedPlaceholder = NSAttributedString(string: "Header",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         phoneTextField.attributedPlaceholder = NSAttributedString(string: "Phone",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         addressTextField.attributedPlaceholder = NSAttributedString(string: "Address",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         websiteTextField.attributedPlaceholder = NSAttributedString(string: "Website",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         linkedinTextField.attributedPlaceholder = NSAttributedString(string: "LinkedIn",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         facebookTextField.attributedPlaceholder = NSAttributedString(string: "Facebook/",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         instagramTextField.attributedPlaceholder = NSAttributedString(string: "Instagram/",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         twitterTextField.attributedPlaceholder = NSAttributedString(string: "Twitter @",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         snapchatTextField.attributedPlaceholder = NSAttributedString(string: "Snapchat",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         tiktokTextField.attributedPlaceholder = NSAttributedString(string: "Tiktok",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         whatsappTextField.attributedPlaceholder = NSAttributedString(string: "Whatsapp",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         youtubeTextField.attributedPlaceholder = NSAttributedString(string: "Youtube",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         twitchTextField.attributedPlaceholder = NSAttributedString(string: "Twitch",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         cashappTextField.attributedPlaceholder = NSAttributedString(string: "CashApp $",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         githubTextField.attributedPlaceholder = NSAttributedString(string: "Github",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         soundcloudTextField.attributedPlaceholder = NSAttributedString(string: "Soundcloud",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.7)])
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         soundcloudTextField.tag = 4
         
         nameTextField.delegate = self
@@ -163,7 +169,6 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.tag == 4 {
-            loadData()
         }
     }
     
@@ -182,6 +187,13 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: - Actions
+    @IBAction func saveData() {
+        saveInfo()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func loadData() {
         if CardHelper.valueForKey(key: CardSection.name.rawValue) != "" {
             nameTextField.text = CardHelper.valueForKey(key: CardSection.name.rawValue)
@@ -242,6 +254,12 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
         }
         if CardHelper.valueForKey(key: CardSection.soundcloud.rawValue) != "" {
             soundcloudTextField.text = CardHelper.valueForKey(key: CardSection.soundcloud.rawValue)
+        }
+        
+        if let imgData = UserDefaults.standard.data(forKey: CardSection.avatar.rawValue) as NSData? {
+            if let image = UIImage(data: imgData as Data) {
+                self.avatarImageView.image = image
+            }
         }
     }
     
@@ -306,6 +324,54 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
         if let soundcloud = soundcloudTextField.text {
             CardHelper.updateValue(value: soundcloud, key: CardSection.soundcloud.rawValue)
         }
+        if let image = avatarImageView.image {
+            let imageData = image.jpegData(compressionQuality: 1.0)
+            UserDefaults.standard.setValue(imageData, forKey: CardSection.avatar.rawValue)
+        }
+    }
+
+    
+    @IBAction func imageTapped() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Choose a photo", style: .default, handler: { (UIAlertAction) in
+            self.imagePicker.delegate = self
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.modalPresentationStyle = .fullScreen
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { (UIAlertAction) in
+            self.imagePicker.delegate = self
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .camera
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.modalPresentationStyle = .fullScreen
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        alert.view.tintColor = self.view.tintColor
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: - UIImage Picker Delegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        var image: UIImage!
+        
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            image = img
+        }
+        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            image = img
+        }
+        self.avatarImageView.image = image
+        self.avatarData = (image)!.pngData()
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 
