@@ -46,10 +46,10 @@ enum CardSection: String {
 }
 
 enum ThemeColors: String {
-    case purple = "716CB7"
-    case blue = "74B0F9"
-    case accent = "E8CA9E"
-    case accent2 = "C0CECF"
+    case purple = "#716CB7"
+    case blue = "#74B0F9"
+    case accent = "#E8CA9E"
+    case accent2 = "#C0CECF"
 }
 
 extension UIColor {
@@ -60,7 +60,7 @@ extension UIColor {
             let start = hex.index(hex.startIndex, offsetBy: 1)
             let hexColor = String(hex[start...])
 
-            if hexColor.count == 8 {
+            if hexColor.count > 1 {
                 let scanner = Scanner(string: hexColor)
                 var hexNumber: UInt64 = 0
 
