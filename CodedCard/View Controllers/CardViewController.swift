@@ -197,10 +197,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         case .whatsapp:
             let link = CardHelper.valueForKey(key: CardSection.whatsapp.rawValue)
             if (!isValid(link: link)) {
-                return "https://www.whatsapp.com/send?phone=\(link)"
+                return "https://api.whatsapp.com/send?phone=\(link)"
             }
             return CardHelper.valueForKey(key: CardSection.whatsapp.rawValue)
         case .youtube:
+            let link = CardHelper.valueForKey(key: CardSection.youtube.rawValue)
+            if (!isValid(link: link)) {
+                return "https://www.youtube.com/\(link)"
+            }
             return CardHelper.valueForKey(key: CardSection.youtube.rawValue)
         case .cashapp:
             let link = CardHelper.valueForKey(key: CardSection.cashapp.rawValue)
