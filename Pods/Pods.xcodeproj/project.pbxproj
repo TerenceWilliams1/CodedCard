@@ -1,0 +1,984 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05496B967028C93A4E899CED4621353F /* DTOverlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF772A4AA7266AABD7EBE286D88375E /* DTOverlayController.swift */; };
+		0C270A4B91BB64BF7F76354675546F7F /* DTOverlayController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACBCD5E8C1F4FA3D1CBBF4C3B2FE58 /* DTOverlayController-dummy.m */; };
+		1C880F92B168890970032BF0E0E658F4 /* Pods-CodedCard-CodedCardUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EA3C6217A34445D2C9A24B6604EF4 /* Pods-CodedCard-CodedCardUITests-dummy.m */; };
+		22A9DA7E24A789EE0A6575C5A59883DF /* Pods-CodedCardTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BA91FF019DCC278CEB39DFFD56EBB3 /* Pods-CodedCardTests-dummy.m */; };
+		28DE41497ECA141732B80E179F567447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2AA7A6279491282D21BB9B3ACF5B78B7 /* DTScrollViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A9140078C50003495EF6C2C62B884 /* DTScrollViewRepresentable.swift */; };
+		46B7920CF70DAAF842C90D29EF3455EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6E41191A34269CDC6D9B0122DC3D85AE /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97A22F8BFD9CB6E81B41F2684F315B /* InteractiveTransition.swift */; };
+		72ED8435D1CC345E0F3DF48DF46382DF /* TransitioningAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE9592F549E46F4BCC454335C894733 /* TransitioningAnimator.swift */; };
+		736DBF59D28EBC85AC382D9F80686ADA /* Pods-CodedCard-CodedCardUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6468B00CFF000D50D734815635B5C84 /* Pods-CodedCard-CodedCardUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FF9A5E32B0414A23E073105E61759F5 /* Pods-CodedCard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2FB673A93A521DC5144F22CC9671F37 /* Pods-CodedCard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5361EA4353DA231E6A46F8D775FB845 /* Pods-CodedCardTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AA867149C8E0A65CFBC04B41DEF3FFF /* Pods-CodedCardTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3B6726798AF88313FF53B3DA8374403 /* Pods-CodedCard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C7A779C2210795B97DD4D331BE0EA5 /* Pods-CodedCard-dummy.m */; };
+		D71212ABB9FFB85B7ABEE468C3747D38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		DC96F186D2DA416A77C75E5D306E435B /* DTOverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D430A835867B73F7E30CC616AF7FED0 /* DTOverlayPresentationController.swift */; };
+		F530A4210A32AE2F3CFBE598ECDADDB1 /* DTOverlayController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1B6AE64546D6653867557013F4DC27B /* DTOverlayController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDEA91DDA1B402F9D1816E6B1C0EF56B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		643232D075C74B7636A1239C0394BA33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A54C567BAF7759AC205CB50EDD7DA1E;
+			remoteInfo = DTOverlayController;
+		};
+		99A7265BEF3B72E539FB4C67A434788D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 408475BD260C7CD383B1BA769FB581BF;
+			remoteInfo = "Pods-CodedCard";
+		};
+		FC9318ACAF4D91C31B320CE5F2A32A4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A54C567BAF7759AC205CB50EDD7DA1E;
+			remoteInfo = DTOverlayController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0294C78C8EC3850B5EB0521E79F242AE /* Pods-CodedCard-CodedCardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CodedCard-CodedCardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		07B1B4C838E2815B652903C4571EF45C /* Pods-CodedCardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CodedCardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F57F0EC9C001B532A6D9D5C2AF83AA3 /* Pods-CodedCard-CodedCardUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CodedCard-CodedCardUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		14BA91FF019DCC278CEB39DFFD56EBB3 /* Pods-CodedCardTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CodedCardTests-dummy.m"; sourceTree = "<group>"; };
+		16C7A779C2210795B97DD4D331BE0EA5 /* Pods-CodedCard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CodedCard-dummy.m"; sourceTree = "<group>"; };
+		17D9AA503442808DB8BB40107913F967 /* Pods-CodedCard-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CodedCard-acknowledgements.plist"; sourceTree = "<group>"; };
+		1C4E84BA82D9FC9398DA055B20A454C4 /* Pods_CodedCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CodedCard.framework; path = "Pods-CodedCard.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D13BA2CF640FA5016E8712F371D9FBB /* Pods-CodedCardTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CodedCardTests.modulemap"; sourceTree = "<group>"; };
+		1D430A835867B73F7E30CC616AF7FED0 /* DTOverlayPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTOverlayPresentationController.swift; path = DTOverlayController/Classes/DTOverlayPresentationController.swift; sourceTree = "<group>"; };
+		1F290A75016A12D057F6DF7DA23A178F /* Pods-CodedCard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CodedCard-Info.plist"; sourceTree = "<group>"; };
+		213E66BFAE28375D5DBBC0C974CD31A5 /* DTOverlayController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTOverlayController.debug.xcconfig; sourceTree = "<group>"; };
+		2C22FF6AC96F80A7BF35D06AAC431FA2 /* Pods-CodedCardTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CodedCardTests-Info.plist"; sourceTree = "<group>"; };
+		2CFE7F8428D23BE8F58665C070CE225A /* Pods-CodedCard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CodedCard.modulemap"; sourceTree = "<group>"; };
+		2EE9592F549E46F4BCC454335C894733 /* TransitioningAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitioningAnimator.swift; path = DTOverlayController/Classes/TransitioningAnimator.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32951B5F3081BD056DD50B6DD9D735D0 /* Pods-CodedCard-CodedCardUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CodedCard-CodedCardUITests-Info.plist"; sourceTree = "<group>"; };
+		33163610B04E94E6FF866C72FF950F89 /* Pods-CodedCard-CodedCardUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CodedCard-CodedCardUITests-frameworks.sh"; sourceTree = "<group>"; };
+		36997C65D5392400860AB38BFF2E045A /* Pods-CodedCardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CodedCardTests.release.xcconfig"; sourceTree = "<group>"; };
+		3AACBCD5E8C1F4FA3D1CBBF4C3B2FE58 /* DTOverlayController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DTOverlayController-dummy.m"; sourceTree = "<group>"; };
+		3EAB6A52B154DA79AD1D32FB65394CE9 /* Pods-CodedCard-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CodedCard-frameworks.sh"; sourceTree = "<group>"; };
+		44CEC76A0461D8325B056CBBA5174668 /* Pods_CodedCard_CodedCardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CodedCard_CodedCardUITests.framework; path = "Pods-CodedCard-CodedCardUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D97A22F8BFD9CB6E81B41F2684F315B /* InteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = DTOverlayController/Classes/InteractiveTransition.swift; sourceTree = "<group>"; };
+		4DD22A3A9C49A32FD833682EEE2FB8A7 /* Pods-CodedCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CodedCard.debug.xcconfig"; sourceTree = "<group>"; };
+		5B67537B81925318AD6FAE39484F4DC9 /* DTOverlayController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTOverlayController-prefix.pch"; sourceTree = "<group>"; };
+		5F60F28C05C28AF7280998C2563869A5 /* Pods-CodedCardTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CodedCardTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E41AAA6486198C5D0BAA109098EA19B /* Pods-CodedCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CodedCard.release.xcconfig"; sourceTree = "<group>"; };
+		7AF772A4AA7266AABD7EBE286D88375E /* DTOverlayController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTOverlayController.swift; path = DTOverlayController/Classes/DTOverlayController.swift; sourceTree = "<group>"; };
+		841C06A95EE3140CB73B178E39B25D57 /* Pods-CodedCard-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CodedCard-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8AA867149C8E0A65CFBC04B41DEF3FFF /* Pods-CodedCardTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CodedCardTests-umbrella.h"; sourceTree = "<group>"; };
+		8CEC7200F08130E49DA622087EB1DA43 /* DTOverlayController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DTOverlayController.release.xcconfig; sourceTree = "<group>"; };
+		991EA3C6217A34445D2C9A24B6604EF4 /* Pods-CodedCard-CodedCardUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CodedCard-CodedCardUITests-dummy.m"; sourceTree = "<group>"; };
+		996097DA4FA3D3778C4936E482A0042F /* Pods-CodedCard-CodedCardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CodedCard-CodedCardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9B66343EAD3245CE186745D12C9B8082 /* Pods-CodedCard-CodedCardUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CodedCard-CodedCardUITests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B70497D60ACFEC18C5369F17DC82F485 /* Pods-CodedCardTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CodedCardTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C35B7343A786F1F8889EB74EE47EA5AF /* DTOverlayController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DTOverlayController.modulemap; sourceTree = "<group>"; };
+		C7A41A87548EEE7DECF4341A335EFBFE /* Pods_CodedCardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CodedCardTests.framework; path = "Pods-CodedCardTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B6AE64546D6653867557013F4DC27B /* DTOverlayController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DTOverlayController-umbrella.h"; sourceTree = "<group>"; };
+		D41FBA5D6E5374FDD3F25FA09CA4330A /* DTOverlayController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DTOverlayController.framework; path = DTOverlayController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB8A9140078C50003495EF6C2C62B884 /* DTScrollViewRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DTScrollViewRepresentable.swift; path = DTOverlayController/Classes/DTScrollViewRepresentable.swift; sourceTree = "<group>"; };
+		E2FB673A93A521DC5144F22CC9671F37 /* Pods-CodedCard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CodedCard-umbrella.h"; sourceTree = "<group>"; };
+		E6468B00CFF000D50D734815635B5C84 /* Pods-CodedCard-CodedCardUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CodedCard-CodedCardUITests-umbrella.h"; sourceTree = "<group>"; };
+		F1E905F7EE36EA0139D0E4005C133F49 /* Pods-CodedCard-CodedCardUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CodedCard-CodedCardUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F403882700E649E0C679B913B1EBC0FF /* DTOverlayController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DTOverlayController-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01034ADF397C1C28D959AD5DE3785E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B7920CF70DAAF842C90D29EF3455EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C635F4BA9A4062A96EA3AFFFE7FCBE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D71212ABB9FFB85B7ABEE468C3747D38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A402544426FF76D571E682653BFCBA74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDEA91DDA1B402F9D1816E6B1C0EF56B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8D0828F1A1A0386110C56675EE09576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DE41497ECA141732B80E179F567447 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		271589ACB31A9683C322FC41F16E52DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D41FBA5D6E5374FDD3F25FA09CA4330A /* DTOverlayController.framework */,
+				1C4E84BA82D9FC9398DA055B20A454C4 /* Pods_CodedCard.framework */,
+				44CEC76A0461D8325B056CBBA5174668 /* Pods_CodedCard_CodedCardUITests.framework */,
+				C7A41A87548EEE7DECF4341A335EFBFE /* Pods_CodedCardTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3468DECE07EB94C31B51DAB12DFCDC89 /* Pods-CodedCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D13BA2CF640FA5016E8712F371D9FBB /* Pods-CodedCardTests.modulemap */,
+				B70497D60ACFEC18C5369F17DC82F485 /* Pods-CodedCardTests-acknowledgements.markdown */,
+				5F60F28C05C28AF7280998C2563869A5 /* Pods-CodedCardTests-acknowledgements.plist */,
+				14BA91FF019DCC278CEB39DFFD56EBB3 /* Pods-CodedCardTests-dummy.m */,
+				2C22FF6AC96F80A7BF35D06AAC431FA2 /* Pods-CodedCardTests-Info.plist */,
+				8AA867149C8E0A65CFBC04B41DEF3FFF /* Pods-CodedCardTests-umbrella.h */,
+				07B1B4C838E2815B652903C4571EF45C /* Pods-CodedCardTests.debug.xcconfig */,
+				36997C65D5392400860AB38BFF2E045A /* Pods-CodedCardTests.release.xcconfig */,
+			);
+			name = "Pods-CodedCardTests";
+			path = "Target Support Files/Pods-CodedCardTests";
+			sourceTree = "<group>";
+		};
+		47801BF3FDA9BE76B643561DF841B46D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C35B7343A786F1F8889EB74EE47EA5AF /* DTOverlayController.modulemap */,
+				3AACBCD5E8C1F4FA3D1CBBF4C3B2FE58 /* DTOverlayController-dummy.m */,
+				F403882700E649E0C679B913B1EBC0FF /* DTOverlayController-Info.plist */,
+				5B67537B81925318AD6FAE39484F4DC9 /* DTOverlayController-prefix.pch */,
+				D1B6AE64546D6653867557013F4DC27B /* DTOverlayController-umbrella.h */,
+				213E66BFAE28375D5DBBC0C974CD31A5 /* DTOverlayController.debug.xcconfig */,
+				8CEC7200F08130E49DA622087EB1DA43 /* DTOverlayController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DTOverlayController";
+			sourceTree = "<group>";
+		};
+		774DE2AF4636B6049306DD495F39EB56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F90E7D388F1484020499F86BA06F3 /* DTOverlayController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				774DE2AF4636B6049306DD495F39EB56 /* Pods */,
+				271589ACB31A9683C322FC41F16E52DF /* Products */,
+				F8A9A00D16248D190F8C70A10C73346E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBFD535A9AF04DF572F7B9381F2F7426 /* Pods-CodedCard */ = {
+			isa = PBXGroup;
+			children = (
+				2CFE7F8428D23BE8F58665C070CE225A /* Pods-CodedCard.modulemap */,
+				841C06A95EE3140CB73B178E39B25D57 /* Pods-CodedCard-acknowledgements.markdown */,
+				17D9AA503442808DB8BB40107913F967 /* Pods-CodedCard-acknowledgements.plist */,
+				16C7A779C2210795B97DD4D331BE0EA5 /* Pods-CodedCard-dummy.m */,
+				3EAB6A52B154DA79AD1D32FB65394CE9 /* Pods-CodedCard-frameworks.sh */,
+				1F290A75016A12D057F6DF7DA23A178F /* Pods-CodedCard-Info.plist */,
+				E2FB673A93A521DC5144F22CC9671F37 /* Pods-CodedCard-umbrella.h */,
+				4DD22A3A9C49A32FD833682EEE2FB8A7 /* Pods-CodedCard.debug.xcconfig */,
+				6E41AAA6486198C5D0BAA109098EA19B /* Pods-CodedCard.release.xcconfig */,
+			);
+			name = "Pods-CodedCard";
+			path = "Target Support Files/Pods-CodedCard";
+			sourceTree = "<group>";
+		};
+		DF5F90E7D388F1484020499F86BA06F3 /* DTOverlayController */ = {
+			isa = PBXGroup;
+			children = (
+				7AF772A4AA7266AABD7EBE286D88375E /* DTOverlayController.swift */,
+				1D430A835867B73F7E30CC616AF7FED0 /* DTOverlayPresentationController.swift */,
+				DB8A9140078C50003495EF6C2C62B884 /* DTScrollViewRepresentable.swift */,
+				4D97A22F8BFD9CB6E81B41F2684F315B /* InteractiveTransition.swift */,
+				2EE9592F549E46F4BCC454335C894733 /* TransitioningAnimator.swift */,
+				47801BF3FDA9BE76B643561DF841B46D /* Support Files */,
+			);
+			name = DTOverlayController;
+			path = DTOverlayController;
+			sourceTree = "<group>";
+		};
+		F4DD51D5DAA152A0B77AA6E1387A2C6A /* Pods-CodedCard-CodedCardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B66343EAD3245CE186745D12C9B8082 /* Pods-CodedCard-CodedCardUITests.modulemap */,
+				F1E905F7EE36EA0139D0E4005C133F49 /* Pods-CodedCard-CodedCardUITests-acknowledgements.markdown */,
+				0F57F0EC9C001B532A6D9D5C2AF83AA3 /* Pods-CodedCard-CodedCardUITests-acknowledgements.plist */,
+				991EA3C6217A34445D2C9A24B6604EF4 /* Pods-CodedCard-CodedCardUITests-dummy.m */,
+				33163610B04E94E6FF866C72FF950F89 /* Pods-CodedCard-CodedCardUITests-frameworks.sh */,
+				32951B5F3081BD056DD50B6DD9D735D0 /* Pods-CodedCard-CodedCardUITests-Info.plist */,
+				E6468B00CFF000D50D734815635B5C84 /* Pods-CodedCard-CodedCardUITests-umbrella.h */,
+				0294C78C8EC3850B5EB0521E79F242AE /* Pods-CodedCard-CodedCardUITests.debug.xcconfig */,
+				996097DA4FA3D3778C4936E482A0042F /* Pods-CodedCard-CodedCardUITests.release.xcconfig */,
+			);
+			name = "Pods-CodedCard-CodedCardUITests";
+			path = "Target Support Files/Pods-CodedCard-CodedCardUITests";
+			sourceTree = "<group>";
+		};
+		F8A9A00D16248D190F8C70A10C73346E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBFD535A9AF04DF572F7B9381F2F7426 /* Pods-CodedCard */,
+				F4DD51D5DAA152A0B77AA6E1387A2C6A /* Pods-CodedCard-CodedCardUITests */,
+				3468DECE07EB94C31B51DAB12DFCDC89 /* Pods-CodedCardTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2B6F5EB00886B99D1264B14EA4AC97F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF9A5E32B0414A23E073105E61759F5 /* Pods-CodedCard-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D52DD5D9FB32E27FC59DC8C8AD0FB00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				736DBF59D28EBC85AC382D9F80686ADA /* Pods-CodedCard-CodedCardUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA42DA1F059B5302A340C839E906F72F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F530A4210A32AE2F3CFBE598ECDADDB1 /* DTOverlayController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB35CE9A76DF4D63DCD774514FFE46B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5361EA4353DA231E6A46F8D775FB845 /* Pods-CodedCardTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A54C567BAF7759AC205CB50EDD7DA1E /* DTOverlayController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FEBC45ACC64FCEF45E56E4BDF6FD1BF /* Build configuration list for PBXNativeTarget "DTOverlayController" */;
+			buildPhases = (
+				DA42DA1F059B5302A340C839E906F72F /* Headers */,
+				05B5D8848843B428BCD8A7CEEBA96D68 /* Sources */,
+				A402544426FF76D571E682653BFCBA74 /* Frameworks */,
+				EAC39BAF535C683F321E5BA9CC24C138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DTOverlayController;
+			productName = DTOverlayController;
+			productReference = D41FBA5D6E5374FDD3F25FA09CA4330A /* DTOverlayController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3689A14ED4B483E1C8E01F6478216EC0 /* Pods-CodedCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C2FA1A39F69AD9E675DB101F0606851 /* Build configuration list for PBXNativeTarget "Pods-CodedCardTests" */;
+			buildPhases = (
+				EB35CE9A76DF4D63DCD774514FFE46B9 /* Headers */,
+				CE39460AEFFDF04B38DDB416E90769F0 /* Sources */,
+				3C635F4BA9A4062A96EA3AFFFE7FCBE3 /* Frameworks */,
+				51C4190E92C86B111DB00DA8360CA3BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE2EEF2B97A8A16643D7FBEE90C44EC8 /* PBXTargetDependency */,
+			);
+			name = "Pods-CodedCardTests";
+			productName = "Pods-CodedCardTests";
+			productReference = C7A41A87548EEE7DECF4341A335EFBFE /* Pods_CodedCardTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		408475BD260C7CD383B1BA769FB581BF /* Pods-CodedCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14DBF7BEF0091F3F5C8B0C5EA4A0EC6 /* Build configuration list for PBXNativeTarget "Pods-CodedCard" */;
+			buildPhases = (
+				2B6F5EB00886B99D1264B14EA4AC97F6 /* Headers */,
+				01986784032F33812700B292613E3BB8 /* Sources */,
+				B8D0828F1A1A0386110C56675EE09576 /* Frameworks */,
+				0EF0B15CDE5EB4AF17AF978DB0F164F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DB792554276F1130271C157269B6612 /* PBXTargetDependency */,
+			);
+			name = "Pods-CodedCard";
+			productName = "Pods-CodedCard";
+			productReference = 1C4E84BA82D9FC9398DA055B20A454C4 /* Pods_CodedCard.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF5D36B14324CF72986D885735C8D891 /* Pods-CodedCard-CodedCardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33CB72F8B4D49890EF0B331ED796EDAA /* Build configuration list for PBXNativeTarget "Pods-CodedCard-CodedCardUITests" */;
+			buildPhases = (
+				6D52DD5D9FB32E27FC59DC8C8AD0FB00 /* Headers */,
+				EC6ED15265B852450FE6609E20F17538 /* Sources */,
+				01034ADF397C1C28D959AD5DE3785E13 /* Frameworks */,
+				0C79C2DCD023E574D1C292B2819DD2AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74216F5D423540EAE4A32A23A0C75151 /* PBXTargetDependency */,
+			);
+			name = "Pods-CodedCard-CodedCardUITests";
+			productName = "Pods-CodedCard-CodedCardUITests";
+			productReference = 44CEC76A0461D8325B056CBBA5174668 /* Pods_CodedCard_CodedCardUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 271589ACB31A9683C322FC41F16E52DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A54C567BAF7759AC205CB50EDD7DA1E /* DTOverlayController */,
+				408475BD260C7CD383B1BA769FB581BF /* Pods-CodedCard */,
+				DF5D36B14324CF72986D885735C8D891 /* Pods-CodedCard-CodedCardUITests */,
+				3689A14ED4B483E1C8E01F6478216EC0 /* Pods-CodedCardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C79C2DCD023E574D1C292B2819DD2AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EF0B15CDE5EB4AF17AF978DB0F164F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51C4190E92C86B111DB00DA8360CA3BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC39BAF535C683F321E5BA9CC24C138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01986784032F33812700B292613E3BB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B6726798AF88313FF53B3DA8374403 /* Pods-CodedCard-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05B5D8848843B428BCD8A7CEEBA96D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C270A4B91BB64BF7F76354675546F7F /* DTOverlayController-dummy.m in Sources */,
+				05496B967028C93A4E899CED4621353F /* DTOverlayController.swift in Sources */,
+				DC96F186D2DA416A77C75E5D306E435B /* DTOverlayPresentationController.swift in Sources */,
+				2AA7A6279491282D21BB9B3ACF5B78B7 /* DTScrollViewRepresentable.swift in Sources */,
+				6E41191A34269CDC6D9B0122DC3D85AE /* InteractiveTransition.swift in Sources */,
+				72ED8435D1CC345E0F3DF48DF46382DF /* TransitioningAnimator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE39460AEFFDF04B38DDB416E90769F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A9DA7E24A789EE0A6575C5A59883DF /* Pods-CodedCardTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6ED15265B852450FE6609E20F17538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C880F92B168890970032BF0E0E658F4 /* Pods-CodedCard-CodedCardUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74216F5D423540EAE4A32A23A0C75151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTOverlayController;
+			target = 0A54C567BAF7759AC205CB50EDD7DA1E /* DTOverlayController */;
+			targetProxy = 643232D075C74B7636A1239C0394BA33 /* PBXContainerItemProxy */;
+		};
+		8DB792554276F1130271C157269B6612 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DTOverlayController;
+			target = 0A54C567BAF7759AC205CB50EDD7DA1E /* DTOverlayController */;
+			targetProxy = FC9318ACAF4D91C31B320CE5F2A32A4D /* PBXContainerItemProxy */;
+		};
+		FE2EEF2B97A8A16643D7FBEE90C44EC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CodedCard";
+			target = 408475BD260C7CD383B1BA769FB581BF /* Pods-CodedCard */;
+			targetProxy = 99A7265BEF3B72E539FB4C67A434788D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A3D0EC8F2C068C2E4BB21F5FEF4B11F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD22A3A9C49A32FD833682EEE2FB8A7 /* Pods-CodedCard.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CodedCard/Pods-CodedCard-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CodedCard/Pods-CodedCard.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F105DE130E7C58EB2BB2D3D56345DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		638FBF747AF4D4CAAC9C3244C645F15F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E41AAA6486198C5D0BAA109098EA19B /* Pods-CodedCard.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CodedCard/Pods-CodedCard-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CodedCard/Pods-CodedCard.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64B8F9F76670E71611822F61D06AB0E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0294C78C8EC3850B5EB0521E79F242AE /* Pods-CodedCard-CodedCardUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CodedCard-CodedCardUITests/Pods-CodedCard-CodedCardUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CodedCard-CodedCardUITests/Pods-CodedCard-CodedCardUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B52C003DEF3856A8E9454B9712A4E06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 213E66BFAE28375D5DBBC0C974CD31A5 /* DTOverlayController.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DTOverlayController/DTOverlayController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DTOverlayController/DTOverlayController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DTOverlayController/DTOverlayController.modulemap";
+				PRODUCT_MODULE_NAME = DTOverlayController;
+				PRODUCT_NAME = DTOverlayController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7AAAFCCFB971F7077ED27F802B4677BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996097DA4FA3D3778C4936E482A0042F /* Pods-CodedCard-CodedCardUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CodedCard-CodedCardUITests/Pods-CodedCard-CodedCardUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CodedCard-CodedCardUITests/Pods-CodedCard-CodedCardUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8ADAFE20F807A71F34CD91E6516231EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07B1B4C838E2815B652903C4571EF45C /* Pods-CodedCardTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CodedCardTests/Pods-CodedCardTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CodedCardTests/Pods-CodedCardTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB9B38139C5627437C662CCBEFC5D805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D2DACADF48CD26375A8C31B3431560B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36997C65D5392400860AB38BFF2E045A /* Pods-CodedCardTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CodedCardTests/Pods-CodedCardTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CodedCardTests/Pods-CodedCardTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D654CB1A7CB533ED7819EF2B384022D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CEC7200F08130E49DA622087EB1DA43 /* DTOverlayController.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DTOverlayController/DTOverlayController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DTOverlayController/DTOverlayController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DTOverlayController/DTOverlayController.modulemap";
+				PRODUCT_MODULE_NAME = DTOverlayController;
+				PRODUCT_NAME = DTOverlayController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FEBC45ACC64FCEF45E56E4BDF6FD1BF /* Build configuration list for PBXNativeTarget "DTOverlayController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B52C003DEF3856A8E9454B9712A4E06 /* Debug */,
+				D654CB1A7CB533ED7819EF2B384022D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CB72F8B4D49890EF0B331ED796EDAA /* Build configuration list for PBXNativeTarget "Pods-CodedCard-CodedCardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B8F9F76670E71611822F61D06AB0E6 /* Debug */,
+				7AAAFCCFB971F7077ED27F802B4677BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F105DE130E7C58EB2BB2D3D56345DEF /* Debug */,
+				AB9B38139C5627437C662CCBEFC5D805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C2FA1A39F69AD9E675DB101F0606851 /* Build configuration list for PBXNativeTarget "Pods-CodedCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ADAFE20F807A71F34CD91E6516231EE /* Debug */,
+				D2DACADF48CD26375A8C31B3431560B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14DBF7BEF0091F3F5C8B0C5EA4A0EC6 /* Build configuration list for PBXNativeTarget "Pods-CodedCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A3D0EC8F2C068C2E4BB21F5FEF4B11F /* Debug */,
+				638FBF747AF4D4CAAC9C3244C645F15F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
