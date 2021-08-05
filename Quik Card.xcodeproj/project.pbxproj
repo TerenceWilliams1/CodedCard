@@ -54,6 +54,7 @@
 		6D9A24EB26BAFC0C00856C69 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCollectionViewCell.swift; path = CodedCard/ItemCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		6D9A24EC26BAFC0C00856C69 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = CodedCard/ItemCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		6D9A250226BB207600856C69 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		6D9A251626BB3B1A00856C69 /* CodedCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodedCard.entitlements; sourceTree = "<group>"; };
 		6DE395EE26B3A9EF00498903 /* CodedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE395F126B3A9EF00498903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE395F326B3A9EF00498903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 		6DE395F026B3A9EF00498903 /* CodedCard */ = {
 			isa = PBXGroup;
 			children = (
+				6D9A251626BB3B1A00856C69 /* CodedCard.entitlements */,
 				6DE395F126B3A9EF00498903 /* AppDelegate.swift */,
 				6DE395F326B3A9EF00498903 /* SceneDelegate.swift */,
 				6DF5CE2526B8924D0036C64E /* Card.swift */,
@@ -303,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DE395E926B3A9EF00498903 /* Build configuration list for PBXProject "CodedCard" */;
+			buildConfigurationList = 6DE395E926B3A9EF00498903 /* Build configuration list for PBXProject "Quik Card" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -646,6 +648,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CodedCard/CodedCard.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				INFOPLIST_FILE = CodedCard/Info.plist;
@@ -653,8 +657,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "terence-williams.CodedCard";
+				PRODUCT_BUNDLE_IDENTIFIER = "terence-williams.QuikCard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -666,6 +671,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CodedCard/CodedCard.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				INFOPLIST_FILE = CodedCard/Info.plist;
@@ -673,8 +680,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "terence-williams.CodedCard";
+				PRODUCT_BUNDLE_IDENTIFIER = "terence-williams.QuikCard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -771,7 +779,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DE395E926B3A9EF00498903 /* Build configuration list for PBXProject "CodedCard" */ = {
+		6DE395E926B3A9EF00498903 /* Build configuration list for PBXProject "Quik Card" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DE3961926B3A9F100498903 /* Debug */,

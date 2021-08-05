@@ -73,6 +73,9 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var soundcloudStack: UIStackView!
     @IBOutlet weak var soundcloudTextField: UITextField!
     
+    @IBOutlet weak var linktreeStack: UIStackView!
+    @IBOutlet weak var linktreeTextField: UITextField!
+    
     @IBOutlet weak var avatarStack: UIStackView!
     @IBOutlet weak var avatarImageView: UIImageView!
     
@@ -131,6 +134,8 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         soundcloudTextField.attributedPlaceholder = NSAttributedString(string: "Soundcloud",
                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
+        linktreeTextField.attributedPlaceholder = NSAttributedString(string: "Linktree",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
         soundcloudTextField.tag = 4
         
         nameTextField.delegate = self
@@ -152,6 +157,7 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         twitchTextField.delegate = self
         githubTextField.delegate = self
         soundcloudTextField.delegate = self
+        linktreeTextField.delegate = self
     }
     
     func setupData() {
@@ -255,6 +261,9 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         if CardHelper.valueForKey(key: CardSection.soundcloud.rawValue) != "" {
             soundcloudTextField.text = CardHelper.valueForKey(key: CardSection.soundcloud.rawValue)
         }
+        if CardHelper.valueForKey(key: CardSection.linktree.rawValue) != "" {
+            linktreeTextField.text = CardHelper.valueForKey(key: CardSection.linktree.rawValue)
+        }
         
         if let imgData = UserDefaults.standard.data(forKey: CardSection.avatar.rawValue) as NSData? {
             if let image = UIImage(data: imgData as Data) {
@@ -264,6 +273,9 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     @IBAction func saveInfo() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         if let name = nameTextField.text {
             CardHelper.updateValue(value: name, key: CardSection.name.rawValue)
         }
@@ -323,6 +335,9 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         }
         if let soundcloud = soundcloudTextField.text {
             CardHelper.updateValue(value: soundcloud, key: CardSection.soundcloud.rawValue)
+        }
+        if let linktree = linktreeTextField.text {
+            CardHelper.updateValue(value: linktree, key: CardSection.linktree.rawValue)
         }
         if let image = avatarImageView.image {
             let imageData = image.jpegData(compressionQuality: 1.0)

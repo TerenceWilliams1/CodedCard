@@ -33,6 +33,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuView.clipsToBounds = true
         
         avatarImageView.layer.masksToBounds = true
+        avatarImageView.layoutIfNeeded()
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
         avatarImageView.layer.borderWidth = 6
         avatarImageView.layer.borderColor = UIColor.init(hex: ThemeColors.blue.rawValue)?.cgColor
@@ -110,6 +111,9 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if CardHelper.valueForKey(key: CardSection.soundcloud.rawValue) != "" {
             sections.append(.soundcloud)
         }
+        if CardHelper.valueForKey(key: CardSection.linktree.rawValue) != "" {
+            sections.append(.linktree)
+        }
     }
     
     //MARK: - Actions
@@ -136,6 +140,9 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+        
         let item = sections[indexPath.row]
         
         let qrCodeViewController = self.storyboard?.instantiateViewController(withIdentifier: "QRCodeViewController") as! QRCodeViewController
@@ -230,6 +237,8 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 return "https://www.soundcloud.com/\(link)"
             }
             return CardHelper.valueForKey(key: CardSection.soundcloud.rawValue)
+        case .linktree:
+            return CardHelper.valueForKey(key: CardSection.linktree.rawValue)
         default:
             return ""
         }

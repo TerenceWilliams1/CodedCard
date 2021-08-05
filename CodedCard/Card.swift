@@ -43,6 +43,7 @@ enum CardSection: String {
     case twitch = "twitch"
     case github = "github"
     case soundcloud = "soundcloud"
+    case linktree = "linktree"
 }
 
 enum ThemeColors: String {

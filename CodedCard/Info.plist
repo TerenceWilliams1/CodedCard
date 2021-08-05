@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Quik Card</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +22,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow access to add a photo to your Quik Card.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow access to add a photo to your Quik Card.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Staatliches-Regular.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -62,13 +72,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Staatliches-Regular.ttf</string>
-	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Allow access to add a photo to your Quik Card.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow access to add a photo to your Quik Card.</string>
 </dict>
 </plist>
