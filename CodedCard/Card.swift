@@ -44,6 +44,11 @@ enum CardSection: String {
     case github = "github"
     case soundcloud = "soundcloud"
     case linktree = "linktree"
+    case spotify = "spotify"
+    case applemusic = "apple music"
+    case etsy = "etsy"
+    case venmo = "venmo"
+    
 }
 
 enum LinkPrefix: String {
@@ -60,6 +65,8 @@ enum LinkPrefix: String {
     case twitch = "https://www.twitch.tv/"
     case github = "https://www.github.com/"
     case soundcloud = "https://www.soundcloud.com/"
+    case venmo = "https://venmo.com/"
+    case etsy = "https://www.etsy.com/shop/"
 }
 
 enum ThemeColors: String {

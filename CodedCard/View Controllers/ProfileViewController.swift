@@ -61,7 +61,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     func setupData() {
         sections = [.phone, .email, .address, .website, .linkedin,
                     .facebook, .instagram, .twitter, .snapchat, .tiktok,
-                    .whatsapp, .youtube, .cashapp, .twitch, .github, .soundcloud, .linktree]
+                    .whatsapp, .youtube, .cashapp, .twitch, .github, .soundcloud,
+                    .linktree, .venmo, .spotify, .etsy, .applemusic]
         
         if CardHelper.valueForKey(key: CardSection.name.rawValue) != "" {
             nameTextField.text = CardHelper.valueForKey(key: CardSection.name.rawValue)
@@ -130,6 +131,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         }
         if let company = companyTextField.text {
             CardHelper.updateValue(value: company, key: CardSection.company.rawValue)
+        }
+        if let image = profileImageView.image {
+            let imageData = image.jpegData(compressionQuality: 1.0)
+            UserDefaults.standard.setValue(imageData, forKey: CardSection.avatar.rawValue)
         }
         self.dismiss(animated: true, completion: nil)
     }

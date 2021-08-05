@@ -62,7 +62,6 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if CardHelper.valueForKey(key: CardSection.company.rawValue) != "" {
             companyLabel.text = CardHelper.valueForKey(key: CardSection.company.rawValue)
         }
-        //-------
         if CardHelper.valueForKey(key: CardSection.email.rawValue) != "" {
             sections.append(.email)
         }
@@ -113,6 +112,18 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         if CardHelper.valueForKey(key: CardSection.linktree.rawValue) != "" {
             sections.append(.linktree)
+        }
+        if CardHelper.valueForKey(key: CardSection.etsy.rawValue) != "" {
+            sections.append(.etsy)
+        }
+        if CardHelper.valueForKey(key: CardSection.venmo.rawValue) != "" {
+            sections.append(.venmo)
+        }
+        if CardHelper.valueForKey(key: CardSection.spotify.rawValue) != "" {
+            sections.append(.spotify)
+        }
+        if CardHelper.valueForKey(key: CardSection.applemusic.rawValue) != "" {
+            sections.append(.applemusic)
         }
     }
     
@@ -239,8 +250,24 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return CardHelper.valueForKey(key: CardSection.soundcloud.rawValue)
         case .linktree:
             return CardHelper.valueForKey(key: CardSection.linktree.rawValue)
+        case .etsy:
+            let link = CardHelper.valueForKey(key: CardSection.etsy.rawValue)
+            if (!isValid(link: link)) {
+                return "https://www.etsy.com/shop/\(link)"
+            }
+            return CardHelper.valueForKey(key: CardSection.etsy.rawValue)
+        case .venmo:
+            let link = CardHelper.valueForKey(key: CardSection.venmo.rawValue)
+            if (!isValid(link: link)) {
+                return "https://venmo.com/\(link)"
+            }
+            return CardHelper.valueForKey(key: CardSection.venmo.rawValue)
+        case .spotify:
+            return CardHelper.valueForKey(key: CardSection.spotify.rawValue)
+        case .applemusic:
+            return CardHelper.valueForKey(key: CardSection.applemusic.rawValue)
         default:
-            return ""
+            return CardHelper.valueForKey(key: section.rawValue)
         }
     }
     

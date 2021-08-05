@@ -100,6 +100,10 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
             return .github
         case .soundcloud:
             return .soundcloud
+        case .etsy:
+            return .etsy
+        case .venmo:
+            return .venmo
         default:
             return .none
         }
@@ -111,7 +115,7 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
             return .numberPad
         case .email:
             return .emailAddress
-        case .website, .youtube, .linktree:
+        case .website, .youtube, .linktree, .spotify, .applemusic:
             return .URL
         default:
             return .default
@@ -139,7 +143,7 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
             return "Enter your address"
         case .email:
             return "Enter your email address"
-        case .website, .linktree:
+        case .website, .linktree, .spotify, .applemusic:
             return "Enter weblink"
         default:
             return "Enter your username"
