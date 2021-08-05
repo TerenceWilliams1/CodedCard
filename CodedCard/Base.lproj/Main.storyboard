@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="488" width="414" height="374"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quik card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-Rr-396">
-                                <rect key="frame" x="37" y="104" width="341" height="81.5"/>
+                                <rect key="frame" x="37" y="104" width="341" height="87.5"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="68"/>
                                 <color key="textColor" red="0.5057162046" green="0.57335788009999999" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.5057162046" green="0.57335788009999999" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -37,28 +37,31 @@
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting made easy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-qa-voC">
-                                <rect key="frame" x="20" y="190.5" width="374" height="26"/>
+                                <rect key="frame" x="20" y="196.5" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuY-Js-PZb">
                                 <rect key="frame" x="107" y="255" width="200" height="55"/>
+                                <color key="backgroundColor" red="0.50957077740000001" green="0.57335966829999996" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="6Od-16-rdo"/>
                                 </constraints>
-                                <state key="normal" image="purpleBtn"/>
+                                <size key="titleShadowOffset" width="0.0" height="8"/>
+                                <state key="normal" title="Edit Card"/>
                                 <connections>
-                                    <segue destination="yJ2-lf-BtE" kind="presentation" id="e4w-O5-Msy"/>
+                                    <segue destination="un9-8E-yfs" kind="presentation" modalPresentationStyle="overCurrentContext" id="kpw-7m-SE8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gew-5j-SP4">
                                 <rect key="frame" x="107" y="340" width="200" height="55"/>
+                                <color key="backgroundColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="1bS-Vw-SON"/>
                                     <constraint firstAttribute="height" constant="55" id="Jp8-4y-Uk0"/>
                                 </constraints>
-                                <state key="normal" image="blueBtn"/>
+                                <state key="normal" title="View Card"/>
                                 <connections>
                                     <segue destination="y3s-p7-CcO" kind="presentation" modalPresentationStyle="overCurrentContext" id="qvS-sC-nTc"/>
                                 </connections>
@@ -343,21 +346,21 @@
                         <viewControllerLayoutGuide type="bottom" id="8mn-jV-df6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rpo-fX-Qso">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quik-DarkBG" translatesAutoresizingMaskIntoConstraints="NO" id="ZpU-QO-e9n">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="886"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vv-Ay-Pkr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="VmA-31-myt"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="1Le-DQ-hLc">
-                                <rect key="frame" x="20" y="62" width="374" height="726"/>
+                                <rect key="frame" x="20" y="106" width="374" height="736"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yls-gt-Sbx">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="1871"/>
@@ -365,7 +368,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wog-QA-mok">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="88"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAavatar.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="oZM-Le-9Ev">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuikCard1024.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oZM-Le-9Ev">
                                                         <rect key="frame" x="0.0" y="3" width="82" height="82"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -406,7 +409,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                 </subviews>
@@ -430,7 +433,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                 </subviews>
@@ -454,7 +457,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textField>
                                                 </subviews>
@@ -478,7 +481,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textField>
                                                 </subviews>
@@ -502,7 +505,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                     </textField>
                                                 </subviews>
@@ -526,7 +529,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                                     </textField>
                                                 </subviews>
@@ -550,7 +553,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" textContentType="street-address"/>
                                                     </textField>
                                                 </subviews>
@@ -574,7 +577,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                                                     </textField>
                                                 </subviews>
@@ -598,7 +601,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" textContentType="username"/>
                                                     </textField>
                                                 </subviews>
@@ -622,7 +625,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -646,7 +649,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -670,7 +673,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="twitter"/>
                                                     </textField>
                                                 </subviews>
@@ -694,7 +697,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -718,7 +721,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -742,7 +745,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
@@ -766,7 +769,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
@@ -790,7 +793,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -814,7 +817,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -838,7 +841,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -862,7 +865,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
@@ -886,7 +889,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
@@ -909,7 +912,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzd-Zh-Cvb">
-                                <rect key="frame" x="341" y="8" width="65" height="42"/>
+                                <rect key="frame" x="341" y="52" width="65" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="1gp-mW-rRi"/>
                                 </constraints>
@@ -922,7 +925,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All of your accounts in one place" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aoc-Cq-RMA">
-                                <rect key="frame" x="20" y="8" width="313" height="44"/>
+                                <rect key="frame" x="20" y="52" width="313" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6DA-Xg-mxc"/>
                                     <constraint firstAttribute="width" constant="313" id="d8n-cz-BZA"/>
@@ -994,15 +997,269 @@
             </objects>
             <point key="canvasLocation" x="1721.7391304347827" y="518.97321428571422"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="oaC-nY-eAI">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="un9-8E-yfs" customClass="ProfileViewController" customModule="CodedCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6iR-vc-k58">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxV-rR-GUW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cvJ-VT-G4z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="systemUltraThinMaterial"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhF-na-E1F">
+                                <rect key="frame" x="20" y="54" width="374" height="798"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ef9-iK-yev">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="272"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz5-wL-RRh">
+                                                <rect key="frame" x="306" y="20" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Fl2-qq-a8e"/>
+                                                    <constraint firstAttribute="width" constant="60" id="lyj-b6-r3c"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closeView" destination="un9-8E-yfs" eventType="touchUpInside" id="kEZ-Ko-5KG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-3F-bVr">
+                                                <rect key="frame" x="8" y="20" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="YDI-nl-kXK"/>
+                                                    <constraint firstAttribute="height" constant="60" id="a91-ol-dSD"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="n7c-Xk-krc">
+                                                <rect key="frame" x="20" y="85" width="342" height="178"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-7u-e0x">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="82"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuikCard1024.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lpO-uA-15J">
+                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="82" id="2nH-1x-vw4"/>
+                                                                    <constraint firstAttribute="width" constant="82" id="HBG-vY-mad"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OwV-2b-SKc">
+                                                                <rect key="frame" x="97" y="0.0" width="245" height="82"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="OIJ-WN-eRy">
+                                                        <rect key="frame" x="0.0" y="95" width="342" height="83"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-hs-V8n">
+                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="22"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="13" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XGq-Qv-I3A">
+                                                                <rect key="frame" x="0.0" y="33" width="342" height="19.5"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Headline" minimumFontSize="13" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dx5-hK-PNs">
+                                                                <rect key="frame" x="0.0" y="63.5" width="342" height="19.5"/>
+                                                                <color key="textColor" red="0.97820841115420176" green="1" blue="0.98277683141728545" alpha="0.8594285102739726" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vz5-wL-RRh" secondAttribute="trailing" constant="8" id="9Ae-7H-zS9"/>
+                                            <constraint firstItem="n7c-Xk-krc" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="20" id="BWl-nP-oAF"/>
+                                            <constraint firstItem="YJZ-3F-bVr" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="8" id="CVR-O0-2Ec"/>
+                                            <constraint firstItem="n7c-Xk-krc" firstAttribute="top" secondItem="YJZ-3F-bVr" secondAttribute="bottom" constant="5" id="FrF-9Q-HPp"/>
+                                            <constraint firstItem="vz5-wL-RRh" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" constant="20" id="SaE-5L-1YM"/>
+                                            <constraint firstItem="YJZ-3F-bVr" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" constant="20" id="Z9l-4Z-Iqb"/>
+                                            <constraint firstAttribute="trailing" secondItem="n7c-Xk-krc" secondAttribute="trailing" constant="12" id="e0m-ST-LAN"/>
+                                            <constraint firstAttribute="bottom" secondItem="n7c-Xk-krc" secondAttribute="bottom" constant="9" id="mjg-Jy-aOw"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AyT-JA-Rcr">
+                                        <rect key="frame" x="15" y="282" width="344" height="516"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="scrollIndicatorInsets" minX="10" minY="0.0" maxX="10" maxY="20"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="Vim-SV-Xmh">
+                                            <size key="itemSize" width="90" height="90"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X3G-gb-H1F">
+                                                <rect key="frame" x="0.0" y="20" width="90" height="90"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="40Q-1Y-PMe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AyT-JA-Rcr" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="bottom" constant="10" id="5Nt-Vy-033"/>
+                                    <constraint firstAttribute="bottom" secondItem="AyT-JA-Rcr" secondAttribute="bottom" id="Ucp-sL-CVm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ef9-iK-yev" secondAttribute="trailing" id="YmD-dL-avc"/>
+                                    <constraint firstItem="Ef9-iK-yev" firstAttribute="leading" secondItem="uhF-na-E1F" secondAttribute="leading" id="jnc-dD-zni"/>
+                                    <constraint firstItem="AyT-JA-Rcr" firstAttribute="leading" secondItem="uhF-na-E1F" secondAttribute="leading" constant="15" id="mAu-a1-iiE"/>
+                                    <constraint firstAttribute="trailing" secondItem="AyT-JA-Rcr" secondAttribute="trailing" constant="15" id="sQf-XI-0EX"/>
+                                    <constraint firstItem="Ef9-iK-yev" firstAttribute="top" secondItem="uhF-na-E1F" secondAttribute="top" id="uln-yq-wkD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C9g-yc-YrI"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hxV-rR-GUW" secondAttribute="bottom" id="28b-b9-2de"/>
+                            <constraint firstItem="hxV-rR-GUW" firstAttribute="leading" secondItem="C9g-yc-YrI" secondAttribute="leading" id="7Pw-Yw-Nqm"/>
+                            <constraint firstItem="uhF-na-E1F" firstAttribute="bottom" secondItem="C9g-yc-YrI" secondAttribute="bottom" constant="-10" id="7ja-ne-obF"/>
+                            <constraint firstItem="C9g-yc-YrI" firstAttribute="trailing" secondItem="hxV-rR-GUW" secondAttribute="trailing" id="EYG-Kb-sVf"/>
+                            <constraint firstItem="hxV-rR-GUW" firstAttribute="centerY" secondItem="6iR-vc-k58" secondAttribute="centerY" id="GHB-4p-jjs"/>
+                            <constraint firstItem="uhF-na-E1F" firstAttribute="leading" secondItem="C9g-yc-YrI" secondAttribute="leading" constant="20" id="Uim-Cg-dqx"/>
+                            <constraint firstItem="uhF-na-E1F" firstAttribute="top" secondItem="C9g-yc-YrI" secondAttribute="top" constant="10" id="X6Y-5f-NvY"/>
+                            <constraint firstItem="C9g-yc-YrI" firstAttribute="trailing" secondItem="uhF-na-E1F" secondAttribute="trailing" constant="20" id="v2k-Pw-kXu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioView" destination="Ef9-iK-yev" id="kfF-gq-F7W"/>
+                        <outlet property="collectionView" destination="AyT-JA-Rcr" id="KeB-q2-Q19"/>
+                        <outlet property="companyTextField" destination="J4W-hs-V8n" id="8Za-xx-cnh"/>
+                        <outlet property="containerView" destination="uhF-na-E1F" id="jYo-mi-RkH"/>
+                        <outlet property="headlineTextField" destination="Dx5-hK-PNs" id="gs3-ql-Sde"/>
+                        <outlet property="nameTextField" destination="OwV-2b-SKc" id="WBl-e2-N9X"/>
+                        <outlet property="profileImageView" destination="lpO-uA-15J" id="luQ-hE-wzR"/>
+                        <outlet property="titleTextField" destination="XGq-Qv-I3A" id="EmI-OU-ZIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6f-Sa-Jke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2450.7246376811595" y="518.30357142857144"/>
+        </scene>
+        <!--Edit Link View Controller-->
+        <scene sceneID="lsO-Wq-6gr">
+            <objects>
+                <viewController storyboardIdentifier="EditLinkViewController" id="gY4-Di-A3i" customClass="EditLinkViewController" customModule="CodedCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h7o-bc-9nG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PQd-rX-jZj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.3659781218" green="0.43754851820000001" blue="0.66807144880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMR-hw-Pya">
+                                <rect key="frame" x="20" y="69" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.97580717520000004" green="1" blue="0.98439469980000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoS-N3-CBJ">
+                                <rect key="frame" x="20" y="107" width="374" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.97820841120000002" green="1" blue="0.98277683140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-zK-MT6">
+                                <rect key="frame" x="20" y="144" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3cf-v1-j14"/>
+                                    <constraint firstAttribute="width" constant="50" id="ENm-qY-Fj0"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="W4J-Sn-LX2">
+                                <rect key="frame" x="78" y="142" width="326" height="45"/>
+                                <color key="tintColor" red="0.9235413925" green="0.79020765690000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ACR-BC-fSL"/>
+                                </constraints>
+                                <color key="textColor" red="0.97820841120000002" green="1" blue="0.98277683140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://facebook.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0p-i0-Pz7">
+                                <rect key="frame" x="20" y="197" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cOz-IA-SO0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eXI-CS-ohP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eXI-CS-ohP" firstAttribute="bottom" secondItem="PQd-rX-jZj" secondAttribute="bottom" id="0va-cD-Cjr"/>
+                            <constraint firstItem="W4J-Sn-LX2" firstAttribute="top" secondItem="GoS-N3-CBJ" secondAttribute="bottom" constant="17.5" id="CNY-vJ-WUk"/>
+                            <constraint firstItem="E0p-i0-Pz7" firstAttribute="top" secondItem="W4J-Sn-LX2" secondAttribute="bottom" constant="10" id="Ea0-PF-9Pi"/>
+                            <constraint firstItem="ic0-zK-MT6" firstAttribute="leading" secondItem="eXI-CS-ohP" secondAttribute="leading" constant="20" id="LKK-gM-ewm"/>
+                            <constraint firstItem="W4J-Sn-LX2" firstAttribute="leading" secondItem="ic0-zK-MT6" secondAttribute="trailing" constant="8" id="PFq-QU-Bv6"/>
+                            <constraint firstItem="E0p-i0-Pz7" firstAttribute="leading" secondItem="eXI-CS-ohP" secondAttribute="leading" constant="20" id="PWB-Yj-h2J"/>
+                            <constraint firstItem="PQd-rX-jZj" firstAttribute="top" secondItem="eXI-CS-ohP" secondAttribute="top" id="Pqb-6F-eXV"/>
+                            <constraint firstItem="eXI-CS-ohP" firstAttribute="trailing" secondItem="E0p-i0-Pz7" secondAttribute="trailing" constant="20" id="QhR-zn-RTJ"/>
+                            <constraint firstItem="eXI-CS-ohP" firstAttribute="trailing" secondItem="GoS-N3-CBJ" secondAttribute="trailing" constant="20" id="TfL-bB-GXk"/>
+                            <constraint firstItem="eXI-CS-ohP" firstAttribute="trailing" secondItem="PQd-rX-jZj" secondAttribute="trailing" id="YM4-uB-BWp"/>
+                            <constraint firstItem="dMR-hw-Pya" firstAttribute="top" secondItem="eXI-CS-ohP" secondAttribute="top" constant="25" id="aIA-WS-ll9"/>
+                            <constraint firstItem="eXI-CS-ohP" firstAttribute="trailing" secondItem="W4J-Sn-LX2" secondAttribute="trailing" constant="10" id="bre-fW-P5D"/>
+                            <constraint firstItem="GoS-N3-CBJ" firstAttribute="leading" secondItem="eXI-CS-ohP" secondAttribute="leading" constant="20" id="e4o-Xs-IsK"/>
+                            <constraint firstItem="PQd-rX-jZj" firstAttribute="leading" secondItem="eXI-CS-ohP" secondAttribute="leading" id="eWf-8b-k8Y"/>
+                            <constraint firstItem="ic0-zK-MT6" firstAttribute="top" secondItem="GoS-N3-CBJ" secondAttribute="bottom" constant="19.5" id="jL7-UE-q01"/>
+                            <constraint firstItem="eXI-CS-ohP" firstAttribute="trailing" secondItem="dMR-hw-Pya" secondAttribute="trailing" constant="20" id="lzg-ma-6bn"/>
+                            <constraint firstItem="GoS-N3-CBJ" firstAttribute="top" secondItem="dMR-hw-Pya" secondAttribute="bottom" constant="8" id="mu4-fg-3Ft"/>
+                            <constraint firstItem="dMR-hw-Pya" firstAttribute="leading" secondItem="eXI-CS-ohP" secondAttribute="leading" constant="20" id="vIY-Wr-aqZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="GoS-N3-CBJ" id="YvV-0m-30f"/>
+                        <outlet property="iconImageView" destination="ic0-zK-MT6" id="YfG-rR-FBt"/>
+                        <outlet property="textField" destination="W4J-Sn-LX2" id="Ikw-H8-Acb"/>
+                        <outlet property="titleLabel" destination="dMR-hw-Pya" id="A8I-eJ-BSx"/>
+                        <outlet property="urlLabel" destination="E0p-i0-Pz7" id="ixE-3N-eAL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcf-VW-PVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150.7246376811595" y="517.63392857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Quik-DarkBG" width="893" height="1629"/>
         <image name="Quik-LightBG" width="893" height="1629"/>
+        <image name="QuikCard1024.jpg" width="1024" height="1024"/>
         <image name="address" width="14" height="16"/>
-        <image name="blueBtn" width="443" height="111"/>
         <image name="cashapp" width="21" height="21"/>
         <image name="company" width="25" height="23"/>
-        <image name="defaultAavatar.jpeg" width="436" height="419"/>
         <image name="email" width="22" height="16"/>
         <image name="facebook" width="23" height="23"/>
         <image name="github" width="25" height="25"/>
@@ -1012,7 +1269,7 @@
         <image name="linktree" width="23" height="19"/>
         <image name="phone" width="21" height="20"/>
         <image name="profile" width="30" height="20"/>
-        <image name="purpleBtn" width="443" height="111"/>
+        <image name="save" width="30" height="22"/>
         <image name="snapchat" width="20" height="18"/>
         <image name="soundcloud" width="35" height="17"/>
         <image name="tiktok" width="17" height="19"/>

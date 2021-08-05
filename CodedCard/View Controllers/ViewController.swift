@@ -20,6 +20,13 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
+        editButton.layoutIfNeeded()
+        editButton.layer.cornerRadius = 14
+        editButton.clipsToBounds = true
+        
+        viewCardButton.layoutIfNeeded()
+        viewCardButton.layer.cornerRadius = 14
+        viewCardButton.clipsToBounds = true
     }
 
 }

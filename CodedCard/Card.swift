@@ -46,6 +46,22 @@ enum CardSection: String {
     case linktree = "linktree"
 }
 
+enum LinkPrefix: String {
+    case none = ""
+    case linkedin = "https://www.linkedin.com/in/"
+    case facebook = "https://www.facebook.com/"
+    case instagram = "https://www.instagram.com/"
+    case twitter = "https://www.twitter.com/"
+    case snapchat = "https://www.snapchat.com/add/"
+    case tiktok = "https://www.tiktok.com/@"
+    case whatsapp = "https://api.whatsapp.com/send?phone="
+    case youtube = "https://www.youtube.com/"
+    case cashapp = "https://www.cash.app/$"
+    case twitch = "https://www.twitch.tv/"
+    case github = "https://www.github.com/"
+    case soundcloud = "https://www.soundcloud.com/"
+}
+
 enum ThemeColors: String {
     case purple = "#716CB7"
     case blue = "#74B0F9"

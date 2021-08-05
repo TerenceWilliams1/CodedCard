@@ -12,6 +12,11 @@
 		6D9A24ED26BAFC0C00856C69 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A24EB26BAFC0C00856C69 /* ItemCollectionViewCell.swift */; };
 		6D9A24EE26BAFC0C00856C69 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D9A24EC26BAFC0C00856C69 /* ItemCollectionViewCell.xib */; };
 		6D9A250326BB207600856C69 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9A250226BB207600856C69 /* QRCodeViewController.swift */; };
+		6DA8CB6B26BB8BA0008FE5D5 /* QuikCard1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DA8CB6A26BB8BA0008FE5D5 /* QuikCard1024.jpg */; };
+		6DA8CB7626BC1DCA008FE5D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8CB7526BC1DCA008FE5D5 /* ProfileViewController.swift */; };
+		6DA8CB7C26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8CB7A26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.swift */; };
+		6DA8CB7D26BC26D5008FE5D5 /* ProfileItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA8CB7B26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.xib */; };
+		6DA8CB8226BC3CAE008FE5D5 /* EditLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8CB8126BC3CAE008FE5D5 /* EditLinkViewController.swift */; };
 		6DE395F226B3A9EF00498903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE395F126B3A9EF00498903 /* AppDelegate.swift */; };
 		6DE395F426B3A9EF00498903 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE395F326B3A9EF00498903 /* SceneDelegate.swift */; };
 		6DE395F626B3A9EF00498903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE395F526B3A9EF00498903 /* ViewController.swift */; };
@@ -55,6 +60,11 @@
 		6D9A24EC26BAFC0C00856C69 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = CodedCard/ItemCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		6D9A250226BB207600856C69 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		6D9A251626BB3B1A00856C69 /* CodedCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodedCard.entitlements; sourceTree = "<group>"; };
+		6DA8CB6A26BB8BA0008FE5D5 /* QuikCard1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = QuikCard1024.jpg; sourceTree = "<group>"; };
+		6DA8CB7526BC1DCA008FE5D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6DA8CB7A26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		6DA8CB7B26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		6DA8CB8126BC3CAE008FE5D5 /* EditLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLinkViewController.swift; sourceTree = "<group>"; };
 		6DE395EE26B3A9EF00498903 /* CodedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE395F126B3A9EF00498903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE395F326B3A9EF00498903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +138,8 @@
 			children = (
 				6D9A24EB26BAFC0C00856C69 /* ItemCollectionViewCell.swift */,
 				6D9A24EC26BAFC0C00856C69 /* ItemCollectionViewCell.xib */,
+				6DA8CB7A26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.swift */,
+				6DA8CB7B26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.xib */,
 			);
 			name = "Collection View Cells";
 			path = Fonts;
@@ -167,6 +179,7 @@
 				6D9A24EA26BAFBD600856C69 /* Collection View Cells */,
 				6DF5CE4E26B9FD460036C64E /* Fonts */,
 				6DE395FD26B3A9F100498903 /* Assets.xcassets */,
+				6DA8CB6A26BB8BA0008FE5D5 /* QuikCard1024.jpg */,
 				6DF5CE4326B8DDDE0036C64E /* defaultAavatar.jpeg */,
 				6DE395FF26B3A9F100498903 /* LaunchScreen.storyboard */,
 				6DE3960226B3A9F100498903 /* Info.plist */,
@@ -198,6 +211,8 @@
 			children = (
 				6DE395F526B3A9EF00498903 /* ViewController.swift */,
 				6DF5CE2026B6470A0036C64E /* InfoViewController.swift */,
+				6DA8CB7526BC1DCA008FE5D5 /* ProfileViewController.swift */,
+				6DA8CB8126BC3CAE008FE5D5 /* EditLinkViewController.swift */,
 				6DF5CE4826B8E5B40036C64E /* CardViewController.swift */,
 				6D9A250226BB207600856C69 /* QRCodeViewController.swift */,
 			);
@@ -333,8 +348,10 @@
 				6DF5CE4426B8DDDE0036C64E /* defaultAavatar.jpeg in Resources */,
 				6DE3960126B3A9F100498903 /* LaunchScreen.storyboard in Resources */,
 				6DF5CE5026B9FD690036C64E /* Staatliches-Regular.ttf in Resources */,
+				6DA8CB7D26BC26D5008FE5D5 /* ProfileItemCollectionViewCell.xib in Resources */,
 				6D9A24EE26BAFC0C00856C69 /* ItemCollectionViewCell.xib in Resources */,
 				6DE395FE26B3A9F100498903 /* Assets.xcassets in Resources */,
+				6DA8CB6B26BB8BA0008FE5D5 /* QuikCard1024.jpg in Resources */,
 				6DE395F926B3A9EF00498903 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,8 +482,11 @@
 			files = (
 				6DE395F626B3A9EF00498903 /* ViewController.swift in Sources */,
 				6DF5CE4926B8E5B40036C64E /* CardViewController.swift in Sources */,
+				6DA8CB8226BC3CAE008FE5D5 /* EditLinkViewController.swift in Sources */,
+				6DA8CB7626BC1DCA008FE5D5 /* ProfileViewController.swift in Sources */,
 				6DF5CE2626B8924D0036C64E /* Card.swift in Sources */,
 				6DE395F226B3A9EF00498903 /* AppDelegate.swift in Sources */,
+				6DA8CB7C26BC26D4008FE5D5 /* ProfileItemCollectionViewCell.swift in Sources */,
 				6DE395F426B3A9EF00498903 /* SceneDelegate.swift in Sources */,
 				6D9A24ED26BAFC0C00856C69 /* ItemCollectionViewCell.swift in Sources */,
 				6D9A250326BB207600856C69 /* QRCodeViewController.swift in Sources */,
@@ -651,6 +671,7 @@
 				CODE_SIGN_ENTITLEMENTS = CodedCard/CodedCard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				INFOPLIST_FILE = CodedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -674,6 +695,7 @@
 				CODE_SIGN_ENTITLEMENTS = CodedCard/CodedCard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				INFOPLIST_FILE = CodedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

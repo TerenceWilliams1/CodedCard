@@ -158,6 +158,10 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         githubTextField.delegate = self
         soundcloudTextField.delegate = self
         linktreeTextField.delegate = self
+        
+        avatarImageView.layoutIfNeeded()
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
+        avatarImageView.image = UIImage(named: "QuikCard1024.jpg")
     }
     
     func setupData() {
@@ -365,6 +369,10 @@ class InfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             self.imagePicker.allowsEditing = true
             self.imagePicker.modalPresentationStyle = .fullScreen
             self.present(self.imagePicker, animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Remove photo", style: .default, handler: { (UIAlertAction) in
+            self.avatarImageView.image = UIImage(named: "QuikCard1024.jpg")
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
