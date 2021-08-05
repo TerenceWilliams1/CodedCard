@@ -101,6 +101,9 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if CardHelper.valueForKey(key: CardSection.cashapp.rawValue) != "" {
             sections.append(.cashapp)
         }
+        if CardHelper.valueForKey(key: CardSection.venmo.rawValue) != "" {
+            sections.append(.venmo)
+        }
         if CardHelper.valueForKey(key: CardSection.twitch.rawValue) != "" {
             sections.append(.twitch)
         }
@@ -110,20 +113,17 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if CardHelper.valueForKey(key: CardSection.soundcloud.rawValue) != "" {
             sections.append(.soundcloud)
         }
-        if CardHelper.valueForKey(key: CardSection.linktree.rawValue) != "" {
-            sections.append(.linktree)
-        }
-        if CardHelper.valueForKey(key: CardSection.etsy.rawValue) != "" {
-            sections.append(.etsy)
-        }
-        if CardHelper.valueForKey(key: CardSection.venmo.rawValue) != "" {
-            sections.append(.venmo)
-        }
         if CardHelper.valueForKey(key: CardSection.spotify.rawValue) != "" {
             sections.append(.spotify)
         }
         if CardHelper.valueForKey(key: CardSection.applemusic.rawValue) != "" {
             sections.append(.applemusic)
+        }
+        if CardHelper.valueForKey(key: CardSection.linktree.rawValue) != "" {
+            sections.append(.linktree)
+        }
+        if CardHelper.valueForKey(key: CardSection.etsy.rawValue) != "" {
+            sections.append(.etsy)
         }
     }
     

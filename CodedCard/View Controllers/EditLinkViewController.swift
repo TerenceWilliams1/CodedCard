@@ -61,7 +61,8 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Text Field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
+        save()
+        return false
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
@@ -140,11 +141,11 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
         case .phone, .whatsapp:
             return "Enter your number"
         case .address:
-            return "Enter your address"
+            return "Enter your full address"
         case .email:
             return "Enter your email address"
         case .website, .linktree, .spotify, .applemusic:
-            return "Enter weblink"
+            return "Enter the URL"
         default:
             return "Enter your username"
         }
@@ -152,77 +153,8 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Data
     func loadData() {
-        switch item {
-        case .phone:
-            if CardHelper.valueForKey(key: CardSection.phone.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.phone.rawValue)
-            }
-        case .email:
-            if CardHelper.valueForKey(key: CardSection.email.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.email.rawValue)
-            }
-        case .address:
-            if CardHelper.valueForKey(key: CardSection.address.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.address.rawValue)
-            }
-        case .website:
-            if CardHelper.valueForKey(key: CardSection.website.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.website.rawValue)
-            }
-        case .linkedin:
-            if CardHelper.valueForKey(key: CardSection.linkedin.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.linkedin.rawValue)
-            }
-        case .facebook:
-            if CardHelper.valueForKey(key: CardSection.facebook.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.facebook.rawValue)
-            }
-        case .instagram:
-            if CardHelper.valueForKey(key: CardSection.instagram.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.instagram.rawValue)
-            }
-        case .twitter:
-            if CardHelper.valueForKey(key: CardSection.twitter.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.twitter.rawValue)
-            }
-        case .snapchat:
-            if CardHelper.valueForKey(key: CardSection.snapchat.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.snapchat.rawValue)
-            }
-        case .tiktok:
-            if CardHelper.valueForKey(key: CardSection.tiktok.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.tiktok.rawValue)
-            }
-        case .whatsapp:
-            if CardHelper.valueForKey(key: CardSection.whatsapp.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.whatsapp.rawValue)
-            }
-        case .youtube:
-            if CardHelper.valueForKey(key: CardSection.youtube.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.youtube.rawValue)
-            }
-        case .cashapp:
-            if CardHelper.valueForKey(key: CardSection.cashapp.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.cashapp.rawValue)
-            }
-        case .twitch:
-            if CardHelper.valueForKey(key: CardSection.twitch.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.twitch.rawValue)
-            }
-        case .github:
-            if CardHelper.valueForKey(key: CardSection.github.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.github.rawValue)
-            }
-        case .soundcloud:
-            if CardHelper.valueForKey(key: CardSection.soundcloud.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.soundcloud.rawValue)
-            }
-        case .linktree:
-            if CardHelper.valueForKey(key: CardSection.linktree.rawValue) != "" {
-                textField.text = CardHelper.valueForKey(key: CardSection.linktree.rawValue)
-            }
-        default:
-            textField.text = ""
+        if CardHelper.valueForKey(key: item.rawValue) != "" {
+            textField.text = CardHelper.valueForKey(key: item.rawValue)
         }
     }
     

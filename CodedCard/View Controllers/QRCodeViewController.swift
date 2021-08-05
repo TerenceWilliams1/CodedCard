@@ -44,5 +44,4 @@ class QRCodeViewController: UIViewController {
         }
         return nil
     }
-
 }

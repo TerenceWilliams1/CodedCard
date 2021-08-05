@@ -104,6 +104,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        nameTextField.resignFirstResponder()
+        headlineTextField.resignFirstResponder()
+        companyTextField.resignFirstResponder()
+        titleTextField.resignFirstResponder()
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         
