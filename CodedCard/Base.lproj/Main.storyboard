@@ -22,24 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quik-LightBG" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-o5-5nY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quik-BlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-o5-5nY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration" translatesAutoresizingMaskIntoConstraints="NO" id="4vk-ZL-pKK">
                                 <rect key="frame" x="0.0" y="488" width="414" height="374"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quik card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-Rr-396">
-                                <rect key="frame" x="37" y="104" width="341" height="87.5"/>
+                                <rect key="frame" x="37" y="104" width="341" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="68"/>
-                                <color key="textColor" red="0.5057162046" green="0.57335788009999999" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="0.5057162046" green="0.57335788009999999" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting made easy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-qa-voC">
-                                <rect key="frame" x="20" y="196.5" width="374" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting made easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-qa-voC">
+                                <rect key="frame" x="20" y="190.5" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuY-Js-PZb">
@@ -123,7 +123,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="systemUltraThinMaterial"/>
+                                <blurEffect style="systemMaterialLight"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdw-Hs-1Dm">
                                 <rect key="frame" x="179.5" y="60" width="55" height="55"/>
@@ -166,7 +166,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-tb-2O4">
                                                         <rect key="frame" x="0.0" y="71.5" width="200" height="27.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <color key="textColor" systemColor="systemGray2Color"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1011,7 +1011,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="systemUltraThinMaterial"/>
+                                <blurEffect style="extraLight"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhF-na-E1F">
                                 <rect key="frame" x="20" y="54" width="374" height="798"/>
@@ -1019,6 +1019,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ef9-iK-yev">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="272"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="fOH-VR-AbD">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="272"/>
+                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz5-wL-RRh">
                                                 <rect key="frame" x="302" y="20" width="60" height="60"/>
                                                 <constraints>
@@ -1101,11 +1104,15 @@
                                             <constraint firstAttribute="trailing" secondItem="vz5-wL-RRh" secondAttribute="trailing" constant="12" id="9Ae-7H-zS9"/>
                                             <constraint firstItem="n7c-Xk-krc" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="20" id="BWl-nP-oAF"/>
                                             <constraint firstItem="YJZ-3F-bVr" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="12" id="CVR-O0-2Ec"/>
+                                            <constraint firstItem="fOH-VR-AbD" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" id="D08-Gs-JRz"/>
                                             <constraint firstItem="n7c-Xk-krc" firstAttribute="top" secondItem="YJZ-3F-bVr" secondAttribute="bottom" constant="5" id="FrF-9Q-HPp"/>
+                                            <constraint firstItem="fOH-VR-AbD" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" id="IGX-U3-Gzh"/>
                                             <constraint firstItem="vz5-wL-RRh" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" constant="20" id="SaE-5L-1YM"/>
                                             <constraint firstItem="YJZ-3F-bVr" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" constant="20" id="Z9l-4Z-Iqb"/>
                                             <constraint firstAttribute="trailing" secondItem="n7c-Xk-krc" secondAttribute="trailing" constant="12" id="e0m-ST-LAN"/>
                                             <constraint firstAttribute="bottom" secondItem="n7c-Xk-krc" secondAttribute="bottom" constant="9" id="mjg-Jy-aOw"/>
+                                            <constraint firstAttribute="trailing" secondItem="fOH-VR-AbD" secondAttribute="trailing" id="ozz-fb-HpI"/>
+                                            <constraint firstAttribute="bottom" secondItem="fOH-VR-AbD" secondAttribute="bottom" id="yUp-pc-6wn"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AyT-JA-Rcr">
@@ -1144,7 +1151,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C9g-yc-YrI"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.3659781218" green="0.43754851820000001" blue="0.66807144880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="hxV-rR-GUW" secondAttribute="bottom" id="28b-b9-2de"/>
                             <constraint firstItem="hxV-rR-GUW" firstAttribute="leading" secondItem="C9g-yc-YrI" secondAttribute="leading" id="7Pw-Yw-Nqm"/>
@@ -1260,8 +1267,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Quik-BlueBG" width="893" height="1629"/>
         <image name="Quik-DarkBG" width="893" height="1629"/>
-        <image name="Quik-LightBG" width="893" height="1629"/>
         <image name="QuikCard1024.jpg" width="1024" height="1024"/>
         <image name="address" width="14" height="16"/>
         <image name="cashapp" width="21" height="21"/>
@@ -1269,6 +1276,7 @@
         <image name="email" width="22" height="16"/>
         <image name="facebook" width="23" height="23"/>
         <image name="github" width="25" height="25"/>
+        <image name="gradient" width="1024" height="1024"/>
         <image name="illustration" width="469" height="450"/>
         <image name="instagram" width="21" height="21"/>
         <image name="linkedin" width="23" height="23"/>
@@ -1291,9 +1299,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

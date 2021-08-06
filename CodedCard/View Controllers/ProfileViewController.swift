@@ -41,8 +41,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         
         profileImageView.layoutIfNeeded()
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
-        profileImageView.layer.borderWidth = 3
-        profileImageView.layer.borderColor = UIColor.init(hex: ThemeColors.blue.rawValue)?.cgColor
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.white.cgColor
         
         nameTextField.delegate = self
         companyTextField.delegate = self
@@ -128,6 +128,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     @IBAction func closeAndSave() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
         if let name = nameTextField.text {
             CardHelper.updateValue(value: name, key: CardSection.name.rawValue)
         }
