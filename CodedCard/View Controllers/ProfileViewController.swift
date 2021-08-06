@@ -124,6 +124,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     
     //MARK: - Actions
     @IBAction func closeView() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func closeAndSave() {
         if let name = nameTextField.text {
             CardHelper.updateValue(value: name, key: CardSection.name.rawValue)
         }

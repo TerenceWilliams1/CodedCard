@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="488" width="414" height="374"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quik card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-Rr-396">
-                                <rect key="frame" x="37" y="104" width="341" height="81.5"/>
+                                <rect key="frame" x="37" y="104" width="341" height="87.5"/>
                                 <fontDescription key="fontDescription" name="Staatliches-Regular" family="Staatliches" pointSize="68"/>
                                 <color key="textColor" red="0.5057162046" green="0.57335788009999999" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.5057162046" green="0.57335788009999999" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -37,7 +37,7 @@
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connecting made easy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-qa-voC">
-                                <rect key="frame" x="20" y="190.5" width="374" height="26"/>
+                                <rect key="frame" x="20" y="196.5" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
@@ -286,7 +286,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quik CardCard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVX-q8-6Ep">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quik Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVX-q8-6Ep">
                                         <rect key="frame" x="87" y="282.5" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="lc0-2Y-tSa"/>
@@ -1020,29 +1020,30 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="272"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz5-wL-RRh">
-                                                <rect key="frame" x="306" y="20" width="60" height="60"/>
+                                                <rect key="frame" x="302" y="20" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Fl2-qq-a8e"/>
                                                     <constraint firstAttribute="width" constant="60" id="lyj-b6-r3c"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="save">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Save"/>
                                                 <connections>
-                                                    <action selector="closeView" destination="un9-8E-yfs" eventType="touchUpInside" id="kEZ-Ko-5KG"/>
+                                                    <action selector="closeAndSave" destination="un9-8E-yfs" eventType="touchUpInside" id="fkq-Mf-llC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-3F-bVr">
-                                                <rect key="frame" x="8" y="20" width="60" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-3F-bVr">
+                                                <rect key="frame" x="12" y="20" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="YDI-nl-kXK"/>
                                                     <constraint firstAttribute="height" constant="60" id="a91-ol-dSD"/>
                                                 </constraints>
-                                                <state key="normal">
+                                                <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="closeView" destination="un9-8E-yfs" eventType="touchUpInside" id="QZr-9T-f1Q"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="n7c-Xk-krc">
                                                 <rect key="frame" x="20" y="85" width="342" height="178"/>
@@ -1097,9 +1098,9 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="vz5-wL-RRh" secondAttribute="trailing" constant="8" id="9Ae-7H-zS9"/>
+                                            <constraint firstAttribute="trailing" secondItem="vz5-wL-RRh" secondAttribute="trailing" constant="12" id="9Ae-7H-zS9"/>
                                             <constraint firstItem="n7c-Xk-krc" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="20" id="BWl-nP-oAF"/>
-                                            <constraint firstItem="YJZ-3F-bVr" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="8" id="CVR-O0-2Ec"/>
+                                            <constraint firstItem="YJZ-3F-bVr" firstAttribute="leading" secondItem="Ef9-iK-yev" secondAttribute="leading" constant="12" id="CVR-O0-2Ec"/>
                                             <constraint firstItem="n7c-Xk-krc" firstAttribute="top" secondItem="YJZ-3F-bVr" secondAttribute="bottom" constant="5" id="FrF-9Q-HPp"/>
                                             <constraint firstItem="vz5-wL-RRh" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" constant="20" id="SaE-5L-1YM"/>
                                             <constraint firstItem="YJZ-3F-bVr" firstAttribute="top" secondItem="Ef9-iK-yev" secondAttribute="top" constant="20" id="Z9l-4Z-Iqb"/>
@@ -1274,7 +1275,6 @@
         <image name="linktree" width="23" height="19"/>
         <image name="phone" width="21" height="20"/>
         <image name="profile" width="30" height="20"/>
-        <image name="save" width="30" height="22"/>
         <image name="snapchat" width="20" height="18"/>
         <image name="soundcloud" width="35" height="17"/>
         <image name="tiktok" width="17" height="19"/>
