@@ -42,6 +42,10 @@ class WalkThroughPageViewController: UIPageViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.moveToNext),
         name: NSNotification.Name(rawValue: "continueWalkthrough"),
         object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.moveToNext2),
+        name: NSNotification.Name(rawValue: "continueWalkthrough2"),
+        object: nil)
 
     }
     
@@ -63,6 +67,11 @@ class WalkThroughPageViewController: UIPageViewController {
     @objc func moveToNext() {
         self.setViewControllers([pages[1]], direction: .forward, animated: true, completion: nil)
     }
+    
+    @objc func moveToNext2() {
+        self.setViewControllers([pages[2]], direction: .forward, animated: true, completion: nil)
+    }
+
 }
 
 extension WalkThroughPageViewController: UIPageViewControllerDataSource {

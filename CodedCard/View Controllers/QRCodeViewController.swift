@@ -10,6 +10,7 @@ import UIKit
 class QRCodeViewController: UIViewController {
     
     @IBOutlet weak var QRImageView: UIImageView!
+    @IBOutlet weak var urlLabel: UILabel!
     
     var item: CardSection = .avatar
     var url: String? = ""
@@ -26,6 +27,7 @@ class QRCodeViewController: UIViewController {
         if let QRImage = generateQRCode(from: url ?? "") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.QRImageView.image = QRImage
+                self.urlLabel.text = self.url
             }
         }
     }
