@@ -56,6 +56,15 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped(_:)))
         profileImageView.addGestureRecognizer(tap)
+        
+        nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
+        companyTextField.attributedPlaceholder = NSAttributedString(string: "Company",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
+        titleTextField.attributedPlaceholder = NSAttributedString(string: "Title",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
+        headlineTextField.attributedPlaceholder = NSAttributedString(string: "Headline",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.6)])
     }
     
     func setupData() {

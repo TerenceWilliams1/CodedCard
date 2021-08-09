@@ -35,6 +35,7 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
         textField.keyboardType = keyboardType()
         textField.textContentType = contentType()
+        textField.allowsEditingTextAttributes = true
         
         let saveToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         saveToolbar.barStyle = .default

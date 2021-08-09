@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+//        showWalkthroughIfNeeded()
     }
     
     func setupUI() {
@@ -29,5 +30,15 @@ class ViewController: UIViewController {
         viewCardButton.clipsToBounds = true
     }
 
+    func showWalkthroughIfNeeded() {
+        if CardHelper.shouldShowWalkthrough() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                let walkthrough = WalkThroughPageViewController(coder: nil)
+                walkthrough?.modalPresentationStyle = .fullScreen
+                walkthrough?.modalTransitionStyle = .coverVertical
+                self.present(walkthrough!, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
