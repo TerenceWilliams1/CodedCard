@@ -36,7 +36,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     func setupUI() {
-        themeColor = CardHelper.theme()
         bioView.backgroundColor = themeColor
         
         containerView.layoutIfNeeded()
@@ -167,25 +166,29 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
             let imageData = image.jpegData(compressionQuality: 1.0)
             UserDefaults.standard.setValue(imageData, forKey: CardSection.avatar.rawValue)
         }
+        
+        CardHelper.updateTheme(color: themeColor)
+        CardHelper.updatePlaceholderTheme(color: themeColor)
+
         self.dismiss(animated: true, completion: nil)
     }
     
     @objc func imageTapped(_ sender: UITapGestureRecognizer? = nil) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Choose a photo", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { (UIAlertAction) in
             self.imagePicker.delegate = self
             self.imagePicker.allowsEditing = true
-            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.sourceType = .camera
             self.imagePicker.allowsEditing = true
             self.imagePicker.modalPresentationStyle = .fullScreen
             self.present(self.imagePicker, animated: true, completion: nil)
         }))
         
-        alert.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Choose a photo", style: .default, handler: { (UIAlertAction) in
             self.imagePicker.delegate = self
             self.imagePicker.allowsEditing = true
-            self.imagePicker.sourceType = .camera
+            self.imagePicker.sourceType = .photoLibrary
             self.imagePicker.allowsEditing = true
             self.imagePicker.modalPresentationStyle = .fullScreen
             self.present(self.imagePicker, animated: true, completion: nil)
@@ -215,6 +218,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     @objc func updateTheme() {
+        themeColor = CardHelper.placeholderTheme()
         self.setupUI()
         self.collectionView.reloadData()
     }

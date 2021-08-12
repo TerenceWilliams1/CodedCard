@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "23F661DA-A250-4684-A924-C8707D76D3B6"
+            uuid = "B1F6FCF6-4461-45A5-BEE5-83BA9FBFFA19"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CodedCard/View Controllers/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "setupUI()"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "updateTheme()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

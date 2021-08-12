@@ -22,7 +22,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var sections: [CardSection] = []
     var itemTitle: String? = ""
     var iconTitle: String? = ""
-    var themeColor: UIColor = UIColor.QuikTheme.charcal
+    var themeColor: UIColor = CardHelper.theme()
 
     override func viewDidLoad() {
         super.viewDidLoad()

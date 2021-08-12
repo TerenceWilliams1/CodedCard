@@ -24,6 +24,15 @@ class CardHelper{
         return UserDefaults.standard.colorForKey(key: QuikValues.themeColor.rawValue) ?? .black
     }
     
+    static func placeholderTheme() -> UIColor {
+        return UserDefaults.standard.colorForKey(key: QuikValues.temporaryThemeColor.rawValue) ?? .black
+    }
+    
+    static func updatePlaceholderTheme(color: UIColor) {
+        UserDefaults.standard.setColor(color: color, forKey: QuikValues.temporaryThemeColor.rawValue)
+        UserDefaults.standard.synchronize()
+    }
+    
     static func updateTheme(color: UIColor) {
         UserDefaults.standard.setColor(color: color, forKey: QuikValues.themeColor.rawValue)
         UserDefaults.standard.synchronize()
@@ -125,46 +134,78 @@ enum ThemeColors: String {
 
 enum QuikValues: String {
     case themeColor = "themeColor"
+    case temporaryThemeColor = "temporaryThemeColor"
+    
     case didUpdateTheme = "didUpdateTheme"
 }
 
 extension UIColor {
     
     struct QuikTheme {
-        static var skyblue: UIColor { return UIColor(hex: "#6293e1")! }
-        static var purple: UIColor { return UIColor(hex: "#716CB7")! }
-        static var charcal: UIColor { return UIColor(hex: "#4C535B")! }
-        static var green: UIColor { return UIColor(hex: "#4cab69")! }
-        static var cranberry: UIColor { return UIColor(hex: "#994550")! }
-        static var mango: UIColor { return UIColor(hex: "#F3a34e")! }
-        static var lavendar: UIColor { return UIColor(hex: "#BB7DC2")! }
-        static var red: UIColor { return UIColor(hex: "#Ab2d2f")! }
+        static var steelBlue: UIColor { return UIColor(hexaRGBA: "#4581bc")! }
+        static var wellRead: UIColor { return UIColor(hexaRGBA: "#C2555c")! }
+        static var mint: UIColor { return UIColor(hexaRGBA: "#7fd08c")! }
+        static var violet: UIColor { return UIColor(hexaRGBA: "#CBAACB")! }
+        static var sorbet: UIColor { return UIColor(hexaRGBA: "#FFCCB6")! }
+        static var seashell: UIColor { return UIColor(hexaRGBA: "#8FCACA")! }
+        static var rose: UIColor { return UIColor(hexaRGBA: "#E3BFB7")! }
+        static var charcoal: UIColor { return UIColor(hexaRGBA: "#8A9BA7")! }
+        static var springGreen: UIColor { return UIColor(hexaRGBA: "#7ABAA1")! }
+        static var maroon: UIColor { return UIColor(hexaRGBA: "#80003A")! }
+        static var midnight: UIColor { return UIColor(hexaRGBA: "#445A67")! }
+        static var coffee: UIColor { return UIColor(hexaRGBA: "#C9BB9F")! }
+        static var evergreen: UIColor { return UIColor(hexaRGBA: "#3D9776")! }
+        static var mustard: UIColor { return UIColor(hexaRGBA: "#EDCC8B")! }
+
+
+//        static var purple: UIColor { return UIColor(hex: "#716CB7")! }
+//        static var charcal: UIColor { return UIColor(hex: "#4C535B")! }
+//        static var green: UIColor { return UIColor(hex: "#4cab69")! }
+//        static var cranberry: UIColor { return UIColor(hex: "#994550")! }
+//        static var mango: UIColor { return UIColor(hex: "#F3a34e")! }
+//        static var lavendar: UIColor { return UIColor(hex: "#BB7DC2")! }
     }
-    
-    public convenience init?(hex: String) {
-        let r, g, b, a: CGFloat
-
-        if hex.hasPrefix("#") {
-            let start = hex.index(hex.startIndex, offsetBy: 1)
-            let hexColor = String(hex[start...])
-
-            if hexColor.count > 1 {
-                let scanner = Scanner(string: hexColor)
-                var hexNumber: UInt64 = 0
-
-                if scanner.scanHexInt64(&hexNumber) {
-                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
-                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
-                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
-                    a = CGFloat(hexNumber & 0x000000ff) / 255
-
-                    self.init(red: r, green: g, blue: b, alpha: a)
-                    return
-                }
+        
+    convenience init?(hexaRGB: String, alpha: CGFloat = 1) {
+            var chars = Array(hexaRGB.hasPrefix("#") ? hexaRGB.dropFirst() : hexaRGB[...])
+            switch chars.count {
+            case 3: chars = chars.flatMap { [$0, $0] }
+            case 6: break
+            default: return nil
             }
+            self.init(red: .init(strtoul(String(chars[0...1]), nil, 16)) / 255,
+                    green: .init(strtoul(String(chars[2...3]), nil, 16)) / 255,
+                     blue: .init(strtoul(String(chars[4...5]), nil, 16)) / 255,
+                    alpha: alpha)
         }
-        return nil
-    }
+
+        convenience init?(hexaRGBA: String) {
+            var chars = Array(hexaRGBA.hasPrefix("#") ? hexaRGBA.dropFirst() : hexaRGBA[...])
+            switch chars.count {
+            case 3: chars = chars.flatMap { [$0, $0] }; fallthrough
+            case 6: chars.append(contentsOf: ["F","F"])
+            case 8: break
+            default: return nil
+            }
+            self.init(red: .init(strtoul(String(chars[0...1]), nil, 16)) / 255,
+                    green: .init(strtoul(String(chars[2...3]), nil, 16)) / 255,
+                     blue: .init(strtoul(String(chars[4...5]), nil, 16)) / 255,
+                    alpha: .init(strtoul(String(chars[6...7]), nil, 16)) / 255)
+        }
+
+        convenience init?(hexaARGB: String) {
+            var chars = Array(hexaARGB.hasPrefix("#") ? hexaARGB.dropFirst() : hexaARGB[...])
+            switch chars.count {
+            case 3: chars = chars.flatMap { [$0, $0] }; fallthrough
+            case 6: chars.append(contentsOf: ["F","F"])
+            case 8: break
+            default: return nil
+            }
+            self.init(red: .init(strtoul(String(chars[2...3]), nil, 16)) / 255,
+                    green: .init(strtoul(String(chars[4...5]), nil, 16)) / 255,
+                     blue: .init(strtoul(String(chars[6...7]), nil, 16)) / 255,
+                    alpha: .init(strtoul(String(chars[0...1]), nil, 16)) / 255)
+        }
 }
 
 extension String {
