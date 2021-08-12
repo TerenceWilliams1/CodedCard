@@ -148,7 +148,7 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
             return "Enter your full address"
         case .email:
             return "Enter your email address"
-        case .website, .linktree, .spotify, .applemusic:
+        case .website, .website2, .website3, .linktree, .spotify, .applemusic:
             return "Enter the URL"
         default:
             return "Enter your username"

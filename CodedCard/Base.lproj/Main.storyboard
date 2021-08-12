@@ -23,11 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quik-BlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-o5-5nY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-o5-5nY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illustration" translatesAutoresizingMaskIntoConstraints="NO" id="4vk-ZL-pKK">
-                                <rect key="frame" x="0.0" y="488" width="414" height="374"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quik card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-Rr-396">
                                 <rect key="frame" x="37" y="104" width="341" height="87.5"/>
@@ -43,59 +40,58 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuY-Js-PZb">
-                                <rect key="frame" x="107" y="255" width="200" height="55"/>
-                                <color key="backgroundColor" red="0.50957077740000001" green="0.57335966829999996" blue="0.83140271899999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nHH-WJ-QZo">
+                                <rect key="frame" x="10" y="767" width="394" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gew-5j-SP4">
+                                        <rect key="frame" x="0.0" y="0.0" width="189.5" height="55"/>
+                                        <color key="backgroundColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Jp8-4y-Uk0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="View Card"/>
+                                        <connections>
+                                            <segue destination="y3s-p7-CcO" kind="presentation" modalPresentationStyle="overCurrentContext" id="qvS-sC-nTc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuY-Js-PZb">
+                                        <rect key="frame" x="204.5" y="0.0" width="189.5" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="6Od-16-rdo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <size key="titleShadowOffset" width="0.0" height="8"/>
+                                        <state key="normal" title="Edit Card">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="un9-8E-yfs" kind="presentation" modalPresentationStyle="fullScreen" id="kpw-7m-SE8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="6Od-16-rdo"/>
+                                    <constraint firstAttribute="height" constant="55" id="f7q-YK-YQl"/>
                                 </constraints>
-                                <size key="titleShadowOffset" width="0.0" height="8"/>
-                                <state key="normal" title="Edit Card"/>
-                                <connections>
-                                    <segue destination="un9-8E-yfs" kind="presentation" modalPresentationStyle="overCurrentContext" id="kpw-7m-SE8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gew-5j-SP4">
-                                <rect key="frame" x="107" y="340" width="200" height="55"/>
-                                <color key="backgroundColor" red="0.48729968070000002" green="0.66497039790000001" blue="0.88238096239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1bS-Vw-SON"/>
-                                    <constraint firstAttribute="height" constant="55" id="Jp8-4y-Uk0"/>
-                                </constraints>
-                                <state key="normal" title="View Card"/>
-                                <connections>
-                                    <segue destination="y3s-p7-CcO" kind="presentation" modalPresentationStyle="overCurrentContext" id="qvS-sC-nTc"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4vk-ZL-pKK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="05j-Z3-XMW"/>
-                            <constraint firstItem="BuY-Js-PZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="1YI-iE-zNo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BuY-Js-PZb" secondAttribute="trailing" constant="107" id="4GP-91-TqC"/>
                             <constraint firstItem="tgX-o5-5nY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9NM-gy-3wC"/>
                             <constraint firstItem="IF2-qa-voC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BNt-GO-QjT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nHH-WJ-QZo" secondAttribute="bottom" constant="40" id="BU8-Em-ndx"/>
                             <constraint firstItem="IF2-qa-voC" firstAttribute="top" secondItem="WWh-Rr-396" secondAttribute="bottom" constant="5" id="F6t-fe-ba7"/>
                             <constraint firstItem="tgX-o5-5nY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hk2-gm-Phe"/>
-                            <constraint firstItem="gew-5j-SP4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="Iab-di-bsg"/>
                             <constraint firstItem="WWh-Rr-396" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="MO5-eo-aVh"/>
-                            <constraint firstItem="4vk-ZL-pKK" firstAttribute="leading" secondItem="tgX-o5-5nY" secondAttribute="leading" id="Mch-Gh-igE"/>
                             <constraint firstItem="tgX-o5-5nY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ODW-BV-6oe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WWh-Rr-396" secondAttribute="trailing" constant="36" id="V7O-nO-fqu"/>
-                            <constraint firstItem="4vk-ZL-pKK" firstAttribute="top" secondItem="gew-5j-SP4" secondAttribute="bottom" constant="93" id="e9Z-yV-Yvi"/>
                             <constraint firstItem="WWh-Rr-396" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="eyi-hd-Mwl"/>
-                            <constraint firstItem="4vk-ZL-pKK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fhj-2J-KBz"/>
                             <constraint firstAttribute="bottom" secondItem="tgX-o5-5nY" secondAttribute="bottom" id="i3t-fa-vty"/>
-                            <constraint firstItem="gew-5j-SP4" firstAttribute="top" secondItem="BuY-Js-PZb" secondAttribute="bottom" constant="30" id="iWE-M8-55i"/>
-                            <constraint firstItem="BuY-Js-PZb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="255" id="jyT-5l-Bj2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nHH-WJ-QZo" secondAttribute="trailing" constant="10" id="kqq-Pn-eAc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IF2-qa-voC" secondAttribute="trailing" constant="20" id="mzm-DR-PEn"/>
-                            <constraint firstItem="4vk-ZL-pKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oaJ-gm-Hlc"/>
-                            <constraint firstItem="4vk-ZL-pKK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rtc-Mt-nhE"/>
-                            <constraint firstItem="BuY-Js-PZb" firstAttribute="centerX" secondItem="4vk-ZL-pKK" secondAttribute="centerX" id="tY2-xF-RKS"/>
-                            <constraint firstItem="BuY-Js-PZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="vSx-kF-9Pp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BuY-Js-PZb" secondAttribute="trailing" constant="107" id="y2z-Dz-oLJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gew-5j-SP4" secondAttribute="trailing" constant="107" id="y6j-bO-yXX"/>
+                            <constraint firstItem="nHH-WJ-QZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qur-x2-zNs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aGu-W4-K3E"/>
@@ -108,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="163"/>
+            <point key="canvasLocation" x="742.02898550724649" y="162.72321428571428"/>
         </scene>
         <!--Card View Controller-->
         <scene sceneID="APu-bf-6io">
@@ -124,7 +120,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="systemMaterialLight"/>
+                                <blurEffect style="systemThickMaterialLight"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdw-Hs-1Dm">
                                 <rect key="frame" x="179.5" y="60" width="55" height="55"/>
@@ -576,13 +572,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="promoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bPK-Dy-AiF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxV-rR-GUW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cvJ-VT-G4z">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="extraLight"/>
+                                <blurEffect style="systemThickMaterialLight"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhF-na-E1F">
                                 <rect key="frame" x="20" y="54" width="374" height="798"/>
@@ -727,10 +726,14 @@
                             <constraint firstAttribute="bottom" secondItem="hxV-rR-GUW" secondAttribute="bottom" id="28b-b9-2de"/>
                             <constraint firstItem="hxV-rR-GUW" firstAttribute="leading" secondItem="C9g-yc-YrI" secondAttribute="leading" id="7Pw-Yw-Nqm"/>
                             <constraint firstItem="uhF-na-E1F" firstAttribute="bottom" secondItem="C9g-yc-YrI" secondAttribute="bottom" constant="-10" id="7ja-ne-obF"/>
+                            <constraint firstItem="bPK-Dy-AiF" firstAttribute="leading" secondItem="hxV-rR-GUW" secondAttribute="leading" id="9Cl-Ch-BaU"/>
                             <constraint firstItem="C9g-yc-YrI" firstAttribute="trailing" secondItem="hxV-rR-GUW" secondAttribute="trailing" id="EYG-Kb-sVf"/>
                             <constraint firstItem="hxV-rR-GUW" firstAttribute="centerY" secondItem="6iR-vc-k58" secondAttribute="centerY" id="GHB-4p-jjs"/>
                             <constraint firstItem="uhF-na-E1F" firstAttribute="leading" secondItem="C9g-yc-YrI" secondAttribute="leading" constant="20" id="Uim-Cg-dqx"/>
                             <constraint firstItem="uhF-na-E1F" firstAttribute="top" secondItem="C9g-yc-YrI" secondAttribute="top" constant="10" id="X6Y-5f-NvY"/>
+                            <constraint firstItem="bPK-Dy-AiF" firstAttribute="top" secondItem="hxV-rR-GUW" secondAttribute="top" id="f7Y-fe-I4B"/>
+                            <constraint firstItem="bPK-Dy-AiF" firstAttribute="bottom" secondItem="hxV-rR-GUW" secondAttribute="bottom" id="gIW-YG-BJQ"/>
+                            <constraint firstItem="bPK-Dy-AiF" firstAttribute="trailing" secondItem="hxV-rR-GUW" secondAttribute="trailing" id="mkc-lR-9mW"/>
                             <constraint firstItem="C9g-yc-YrI" firstAttribute="trailing" secondItem="uhF-na-E1F" secondAttribute="trailing" constant="20" id="v2k-Pw-kXu"/>
                         </constraints>
                     </view>
@@ -747,7 +750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6f-Sa-Jke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="467"/>
+            <point key="canvasLocation" x="1721.7391304347827" y="466.74107142857139"/>
         </scene>
         <!--Edit Link View Controller-->
         <scene sceneID="lsO-Wq-6gr">
@@ -893,7 +896,7 @@
         <image name="cards" width="785" height="949"/>
         <image name="facebook" width="23" height="23"/>
         <image name="gradient" width="1024" height="1024"/>
-        <image name="illustration" width="469" height="450"/>
+        <image name="promoBackground" width="2246" height="1500"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import OneSignal
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         CardHelper.updateNewVersionLaunchCount(count: CardHelper.newVersionLaunchCount() + 1)
+        
+        OneSignal.initWithLaunchOptions(launchOptions)
+        OneSignal.setAppId("ac1e69b6-cb65-4f2d-9343-2c626630cc61")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.registerNotifications),
+                                               name: NSNotification.Name(rawValue: "registerNotifications"),
+                                               object: nil)
+        
         return true
+    }
+    
+    // MARK: - Notifications
+    @objc func registerNotifications() {
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            CardHelper.setHasSeenNotificationPrompt()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismissInfoView"),
+                                            object: nil,
+                                            userInfo: nil)
+            if accepted {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        })
     }
 
     // MARK: UISceneSession Lifecycle

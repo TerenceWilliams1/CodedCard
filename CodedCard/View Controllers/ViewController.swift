@@ -20,16 +20,27 @@ class ViewController: UIViewController {
         setupUI()
         showWalkthroughIfNeeded()
         promptForReview()
+        if !CardHelper.hasSeenNotificationPrompt() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.enableNotifications()
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupUI()
     }
     
     func setupUI() {
         editButton.layoutIfNeeded()
-        editButton.layer.cornerRadius = 14
+        editButton.layer.cornerRadius = 10
         editButton.clipsToBounds = true
+        editButton.setTitleColor(CardHelper.theme(), for: .normal)
         
         viewCardButton.layoutIfNeeded()
-        viewCardButton.layer.cornerRadius = 14
+        viewCardButton.layer.cornerRadius = 10
         viewCardButton.clipsToBounds = true
+        viewCardButton.backgroundColor = CardHelper.theme()
     }
 
     func showWalkthroughIfNeeded() {
@@ -49,6 +60,12 @@ class ViewController: UIViewController {
         if (currentCount == 3 || currentCount == 8 || currentCount == 15 || currentCount == 30){
             SKStoreReviewController.requestReview()
         }
+    }
+    
+    func enableNotifications() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "registerNotifications"),
+                                        object: nil,
+                                        userInfo: nil)
     }
 }
 

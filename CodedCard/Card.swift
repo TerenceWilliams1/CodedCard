@@ -21,11 +21,11 @@ class CardHelper{
     }
     
     static func theme() -> UIColor {
-        return UserDefaults.standard.colorForKey(key: QuikValues.themeColor.rawValue) ?? .black
+        return UserDefaults.standard.colorForKey(key: QuikValues.themeColor.rawValue) ?? UIColor(hexaRGBA: "#4581bc")! 
     }
     
     static func placeholderTheme() -> UIColor {
-        return UserDefaults.standard.colorForKey(key: QuikValues.temporaryThemeColor.rawValue) ?? .black
+        return UserDefaults.standard.colorForKey(key: QuikValues.temporaryThemeColor.rawValue) ?? UIColor(hexaRGBA: "#4581bc")! 
     }
     
     static func updatePlaceholderTheme(color: UIColor) {
@@ -52,6 +52,14 @@ class CardHelper{
     
     static func updateNewVersionLaunchCount(count: Int) {
            UserDefaults.standard.set(count, forKey: "newVersionLaunch1")
+    }
+    
+    static func hasSeenNotificationPrompt() -> Bool {
+        return UserDefaults.standard.bool(forKey: "seenNotificationPrompt")
+    }
+    
+    static func setHasSeenNotificationPrompt() {
+        UserDefaults.standard.set(true, forKey: "seenNotificationPrompt")
     }
     
     static func hexStringToUIColor (hex:String) -> UIColor {

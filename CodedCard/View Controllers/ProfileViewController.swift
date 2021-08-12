@@ -217,7 +217,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
 
         let overlayController = DTOverlayController(viewController: themeViewController)
         overlayController.overlayHeight = .dynamic(0.4)
-        overlayController.isPanGestureEnabled = true
+        overlayController.isPanGestureEnabled = false
         present(overlayController, animated: true, completion: nil)
     }
     

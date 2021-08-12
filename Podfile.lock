@@ -1,16 +1,20 @@
 PODS:
   - DTOverlayController (1.0.2)
+  - OneSignal (3.0.1)
 
 DEPENDENCIES:
   - DTOverlayController
+  - OneSignal (< 4.0, >= 3.0.0)
 
 SPEC REPOS:
   trunk:
     - DTOverlayController
+    - OneSignal
 
 SPEC CHECKSUMS:
   DTOverlayController: 7bd26660a6152efabea36f9342182c038d80852e
+  OneSignal: 29b4046637f63c7212785f47f0eb1f2472649285
 
-PODFILE CHECKSUM: 69b6412a03c228d0ea4fefc68bbb33ab44446ebb
+PODFILE CHECKSUM: a006e48c786eae343045f40c1628eb1878418a6d
 
 COCOAPODS: 1.9.1

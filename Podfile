@@ -7,6 +7,7 @@ target 'CodedCard' do
 
   # Pods for CodedCard
 pod 'DTOverlayController'
+pod 'OneSignal', '>= 3.0.0', '< 4.0'
 
   target 'CodedCardTests' do
     inherit! :search_paths
