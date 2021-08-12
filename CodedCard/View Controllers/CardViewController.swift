@@ -78,6 +78,12 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if CardHelper.valueForKey(key: CardSection.website.rawValue) != "" {
             sections.append(.website)
         }
+        if CardHelper.valueForKey(key: CardSection.website2.rawValue) != "" {
+            sections.append(.website2)
+        }
+        if CardHelper.valueForKey(key: CardSection.website3.rawValue) != "" {
+            sections.append(.website3)
+        }
         if CardHelper.valueForKey(key: CardSection.linkedin.rawValue) != "" {
             sections.append(.linkedin)
         }

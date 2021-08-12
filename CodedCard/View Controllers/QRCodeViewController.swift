@@ -10,6 +10,7 @@ import UIKit
 class QRCodeViewController: UIViewController {
     
     @IBOutlet weak var QRImageView: UIImageView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var urlLabel: UILabel!
     
     var item: CardSection = .avatar
@@ -21,6 +22,8 @@ class QRCodeViewController: UIViewController {
     }
     
     func setupUI() {
+        backgroundImageView.backgroundColor = CardHelper.theme()
+        
         QRImageView.layer.cornerRadius = 24
         QRImageView.clipsToBounds = true
         

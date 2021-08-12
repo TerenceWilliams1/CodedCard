@@ -14,6 +14,7 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
 
     var item: CardSection = .avatar
@@ -37,9 +38,11 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
         textField.textContentType = contentType()
         textField.allowsEditingTextAttributes = true
         
+        backgroundImageView.backgroundColor = CardHelper.placeholderTheme()
+        
         let saveToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         saveToolbar.barStyle = .default
-        saveToolbar.tintColor = self.view.tintColor
+        saveToolbar.tintColor = UIColor.darkGray
         
         let flexspace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let saveBtton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(save))
@@ -164,6 +167,9 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
         generator.impactOccurred()
         
         CardHelper.updateValue(value: textField.text!, key: item.rawValue)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: QuikValues.refreshProfile.rawValue),
+                                        object: nil,
+                                        userInfo: nil)
         self.dismiss(animated: true, completion: nil)
     }
 }

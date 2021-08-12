@@ -87,6 +87,8 @@ enum CardSection: String {
     case phone = "phone"
     case address = "address"
     case website = "website"
+    case website2 = "website2"
+    case website3 = "website3"
     case linkedin = "linkedin"
     case facebook = "facebook"
     case instagram = "instagram"
@@ -137,6 +139,7 @@ enum QuikValues: String {
     case temporaryThemeColor = "temporaryThemeColor"
     
     case didUpdateTheme = "didUpdateTheme"
+    case refreshProfile = "refreshProfile"
 }
 
 extension UIColor {

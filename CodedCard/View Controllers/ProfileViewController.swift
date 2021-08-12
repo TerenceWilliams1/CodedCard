@@ -71,7 +71,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     func setupData() {
-        sections = [.phone, .email, .address, .website, .linkedin,
+        sections = [.phone, .email, .address, .website, .website2, .website3, .linkedin,
                     .facebook, .instagram, .twitter, .snapchat, .tiktok,
                     .whatsapp, .youtube, .cashapp, .twitch, .github, .soundcloud,
                     .linktree, .venmo, .spotify, .etsy, .applemusic]
@@ -96,7 +96,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateTheme),
                                                name: NSNotification.Name(rawValue: QuikValues.didUpdateTheme.rawValue),
-        object: nil)
+                                               object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPage),
+                                               name: NSNotification.Name(rawValue: QuikValues.refreshProfile.rawValue),
+                                               object: nil)
     }
     
     //MARK: - Text Field
@@ -143,6 +146,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     
     //MARK: - Actions
     @IBAction func closeView() {
+        CardHelper.updatePlaceholderTheme(color: CardHelper.theme())
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -204,7 +208,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
-        alert.view.tintColor = self.view.tintColor
+        alert.view.tintColor = UIColor.darkGray
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -219,6 +223,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     
     @objc func updateTheme() {
         themeColor = CardHelper.placeholderTheme()
+        self.refreshPage()
+    }
+    
+    @objc func refreshPage() {
         self.setupUI()
         self.collectionView.reloadData()
     }
