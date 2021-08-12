@@ -27,6 +27,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     var sections: [CardSection] = []
     var imagePicker = UIImagePickerController()
     var avatarData: Data?
+    var themeColor: UIColor = CardHelper.theme()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     func setupUI() {
+        themeColor = CardHelper.theme()
+        bioView.backgroundColor = themeColor
+        
         containerView.layoutIfNeeded()
         containerView.layer.cornerRadius = 30
         containerView.clipsToBounds = true
@@ -90,6 +94,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
                 self.profileImageView.image = image
             }
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateTheme),
+                                               name: NSNotification.Name(rawValue: QuikValues.didUpdateTheme.rawValue),
+        object: nil)
     }
     
     //MARK: - Text Field
@@ -102,13 +110,16 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         sections.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileItemCollectionViewCell", for: indexPath) as? ProfileItemCollectionViewCell
         
         let item = sections[indexPath.row]
         cell?.titleLabel.text = item.rawValue.capitalized
         cell?.iconImageView.image = UIImage(named: item.rawValue)
+        cell?.backgroundImageView.backgroundColor = themeColor
+        cell?.backgroundImageView.alpha = statusForSection(item: item) ? 1.0 : 0.6
+        
         return cell!
     }
     
@@ -183,11 +194,29 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         alert.addAction(UIAlertAction(title: "Remove photo", style: .default, handler: { (UIAlertAction) in
             self.profileImageView.image = UIImage(named: "QuikCard1024.jpg")
         }))
+        
+        alert.addAction(UIAlertAction(title: "Change Theme Color", style: .default, handler: { (UIAlertAction) in
+            self.changeTheme()
+        }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         alert.view.tintColor = self.view.tintColor
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func changeTheme() {
+        let themeViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThemeViewController") as! ThemeViewController
+
+        let overlayController = DTOverlayController(viewController: themeViewController)
+        overlayController.overlayHeight = .dynamic(0.4)
+        overlayController.isPanGestureEnabled = true
+        present(overlayController, animated: true, completion: nil)
+    }
+    
+    @objc func updateTheme() {
+        self.setupUI()
+        self.collectionView.reloadData()
     }
     
     //MARK: - UIImage Picker Delegate
@@ -204,5 +233,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         self.profileImageView.image = image
         self.avatarData = (image)!.pngData()
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: - Helpers
+    func statusForSection(item: CardSection) -> Bool {
+        return CardHelper.valueForKey(key: item.rawValue) != ""
     }
 }

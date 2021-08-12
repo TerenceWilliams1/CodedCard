@@ -11,6 +11,7 @@ import DTOverlayController
 class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var menuView: UIView!
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -21,6 +22,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var sections: [CardSection] = []
     var itemTitle: String? = ""
     var iconTitle: String? = ""
+    var themeColor: UIColor = UIColor.QuikTheme.charcal
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +33,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func setupUI() {
         menuView.layer.cornerRadius = 60
         menuView.clipsToBounds = true
-        
+                
         avatarImageView.layer.masksToBounds = true
         avatarImageView.layoutIfNeeded()
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
         avatarImageView.layer.borderWidth = 6
-        avatarImageView.layer.borderColor = UIColor.init(hex: ThemeColors.blue.rawValue)?.cgColor
+        avatarImageView.layer.borderColor = themeColor.cgColor        
+        cardView.backgroundColor = themeColor
+
         
         collectionView.dataSource = self
         collectionView.delegate = self

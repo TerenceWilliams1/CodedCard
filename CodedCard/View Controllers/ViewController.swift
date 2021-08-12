@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class ViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         showWalkthroughIfNeeded()
+        promptForReview()
     }
     
     func setupUI() {
@@ -38,6 +40,14 @@ class ViewController: UIViewController {
                 walkthrough?.modalTransitionStyle = .coverVertical
                 self.present(walkthrough!, animated: true, completion: nil)
             }
+        }
+    }
+    
+    func promptForReview() {
+        //Ask For  Review
+        let currentCount = CardHelper.newVersionLaunchCount()
+        if (currentCount == 3 || currentCount == 8 || currentCount == 15 || currentCount == 30){
+            SKStoreReviewController.requestReview()
         }
     }
 }

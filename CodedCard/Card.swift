@@ -20,12 +20,51 @@ class CardHelper{
         return UserDefaults.standard.value(forKey: key) as? String ?? ""
     }
     
+    static func theme() -> UIColor {
+        return UserDefaults.standard.colorForKey(key: QuikValues.themeColor.rawValue) ?? .black
+    }
+    
+    static func updateTheme(color: UIColor) {
+        UserDefaults.standard.setColor(color: color, forKey: QuikValues.themeColor.rawValue)
+        UserDefaults.standard.synchronize()
+    }
+    
     static func shouldShowWalkthrough() -> Bool {
         return !UserDefaults.standard.bool(forKey: "hasSeenWalkThrough")
     }
     
     static func setHasSeenWalkthrough() {
         UserDefaults.standard.setValue(true, forKey: "hasSeenWalkThrough")
+    }
+    
+    static func newVersionLaunchCount() -> Int {
+        return UserDefaults.standard.integer(forKey: "newVersionLaunch1")
+    }
+    
+    static func updateNewVersionLaunchCount(count: Int) {
+           UserDefaults.standard.set(count, forKey: "newVersionLaunch1")
+    }
+    
+    static func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
 
@@ -84,7 +123,24 @@ enum ThemeColors: String {
     case accent2 = "#C0CECF"
 }
 
+enum QuikValues: String {
+    case themeColor = "themeColor"
+    case didUpdateTheme = "didUpdateTheme"
+}
+
 extension UIColor {
+    
+    struct QuikTheme {
+        static var skyblue: UIColor { return UIColor(hex: "#6293e1")! }
+        static var purple: UIColor { return UIColor(hex: "#716CB7")! }
+        static var charcal: UIColor { return UIColor(hex: "#4C535B")! }
+        static var green: UIColor { return UIColor(hex: "#4cab69")! }
+        static var cranberry: UIColor { return UIColor(hex: "#994550")! }
+        static var mango: UIColor { return UIColor(hex: "#F3a34e")! }
+        static var lavendar: UIColor { return UIColor(hex: "#BB7DC2")! }
+        static var red: UIColor { return UIColor(hex: "#Ab2d2f")! }
+    }
+    
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat
 
@@ -107,7 +163,6 @@ extension UIColor {
                 }
             }
         }
-
         return nil
     }
 }
@@ -124,4 +179,33 @@ extension String {
         UIGraphicsEndImageContext()
         return image
     }
+}
+
+extension UserDefaults {
+    func colorForKey(key: String) -> UIColor? {
+    var colorReturnded: UIColor?
+    if let colorData = data(forKey: key) {
+      do {
+        if let color = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(colorData) as? UIColor {
+          colorReturnded = color
+        }
+      } catch {
+        print("Error UserDefaults")
+      }
+    }
+    return colorReturnded
+  }
+  
+   func setColor(color: UIColor?, forKey key: String) {
+    var colorData: NSData?
+    if let color = color {
+      do {
+        let data = try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false) as NSData?
+        colorData = data
+      } catch {
+        print("Error UserDefaults")
+      }
+    }
+    set(colorData, forKey: key)
+  }
 }
