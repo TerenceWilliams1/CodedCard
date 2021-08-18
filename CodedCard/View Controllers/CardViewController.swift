@@ -135,6 +135,9 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if CardHelper.valueForKey(key: CardSection.etsy.rawValue) != "" {
             sections.append(.etsy)
         }
+        if CardHelper.valueForKey(key: CardSection.pinterest.rawValue) != "" {
+            sections.append(.pinterest)
+        }
     }
     
     //MARK: - Actions

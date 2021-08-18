@@ -109,6 +109,8 @@ class EditLinkViewController: UIViewController, UITextFieldDelegate {
             return .etsy
         case .venmo:
             return .venmo
+        case .pinterest:
+            return .pinterest
         default:
             return .none
         }

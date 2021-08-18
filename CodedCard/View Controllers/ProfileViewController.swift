@@ -73,8 +73,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     func setupData() {
         sections = [.phone, .email, .address, .website, .website2, .website3, .linkedin,
                     .facebook, .instagram, .twitter, .snapchat, .tiktok,
-                    .whatsapp, .youtube, .cashapp, .twitch, .github, .soundcloud,
-                    .linktree, .venmo, .spotify, .etsy, .applemusic]
+                    .whatsapp, .pinterest, .youtube, .cashapp, .twitch, .github, .soundcloud,
+                    .linktree, .venmo, .etsy, .spotify, .applemusic]
         
         if CardHelper.valueForKey(key: CardSection.name.rawValue) != "" {
             nameTextField.text = CardHelper.valueForKey(key: CardSection.name.rawValue)
@@ -146,8 +146,16 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     
     //MARK: - Actions
     @IBAction func closeView() {
-        CardHelper.updatePlaceholderTheme(color: CardHelper.theme())
-        self.dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to discard your profile changes?", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Discard Changes", style: .default, handler: { UIAlertAction in
+            CardHelper.updatePlaceholderTheme(color: CardHelper.theme())
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Keep Editing", style: .cancel, handler: nil))
+        alert.view.tintColor = UIColor.darkGray
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func closeAndSave() {

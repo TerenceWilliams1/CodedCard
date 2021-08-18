@@ -21,11 +21,11 @@ class CardHelper{
     }
     
     static func theme() -> UIColor {
-        return UserDefaults.standard.colorForKey(key: QuikValues.themeColor.rawValue) ?? UIColor(hexaRGBA: "#4581bc")! 
+        return UserDefaults.standard.colorForKey(key: QuikValues.themeColor.rawValue) ?? UIColor(hexaRGBA: "#3D9776")! 
     }
     
     static func placeholderTheme() -> UIColor {
-        return UserDefaults.standard.colorForKey(key: QuikValues.temporaryThemeColor.rawValue) ?? UIColor(hexaRGBA: "#4581bc")! 
+        return UserDefaults.standard.colorForKey(key: QuikValues.temporaryThemeColor.rawValue) ?? UIColor(hexaRGBA: "#3D9776")! 
     }
     
     static func updatePlaceholderTheme(color: UIColor) {
@@ -114,6 +114,7 @@ enum CardSection: String {
     case applemusic = "apple music"
     case etsy = "etsy"
     case venmo = "venmo"
+    case pinterest = "pinterest"
     
 }
 
@@ -133,6 +134,7 @@ enum LinkPrefix: String {
     case soundcloud = "https://www.soundcloud.com/"
     case venmo = "https://venmo.com/"
     case etsy = "https://www.etsy.com/shop/"
+    case pinterest = "https://www.pinterest.com/"
 }
 
 enum ThemeColors: String {
