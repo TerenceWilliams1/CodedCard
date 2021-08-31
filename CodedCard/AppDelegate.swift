@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import OneSignal
+import SafariServices
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -174,7 +174,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         qrCodeViewController.url = code(_forSection: item)
 
         let overlayController = DTOverlayController(viewController: qrCodeViewController)
-        overlayController.overlayHeight = .dynamic(0.6)
+        overlayController.overlayHeight = .dynamic(0.75)
         overlayController.isPanGestureEnabled = true
         present(overlayController, animated: true, completion: nil)
     }

@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var headlineTextField: UITextField!
+    @IBOutlet weak var closeButton: UIButton!
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -147,7 +148,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     //MARK: - Actions
     @IBAction func closeView() {
         let alert = UIAlertController(title: nil, message: "Are you sure you want to discard your profile changes?", preferredStyle: .actionSheet)
-        
+                
         alert.addAction(UIAlertAction(title: "Discard Changes", style: .default, handler: { UIAlertAction in
             CardHelper.updatePlaceholderTheme(color: CardHelper.theme())
             self.dismiss(animated: true, completion: nil)
@@ -155,6 +156,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         
         alert.addAction(UIAlertAction(title: "Keep Editing", style: .cancel, handler: nil))
         alert.view.tintColor = UIColor.darkGray
+        
+        let popPresenter = alert.popoverPresentationController
+        popPresenter?.sourceView = closeButton
+        popPresenter?.sourceRect = closeButton.bounds
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -186,6 +191,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
     }
     
     @objc func imageTapped(_ sender: UITapGestureRecognizer? = nil) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { (UIAlertAction) in
@@ -217,6 +225,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
         alert.view.tintColor = UIColor.darkGray
+        
+        let popPresenter = alert.popoverPresentationController
+        popPresenter?.sourceView = profileImageView
+        popPresenter?.sourceRect = profileImageView.bounds
         self.present(alert, animated: true, completion: nil)
     }
     

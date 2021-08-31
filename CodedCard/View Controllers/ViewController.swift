@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var viewCardButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,20 @@ class ViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "registerNotifications"),
                                         object: nil,
                                         userInfo: nil)
+    }
+    
+    @IBAction func shareApp() {
+        let promoText = "Create QR codes for all of your sites and social accounts with the Quik Card app. It's the ultimate virtual business card.\n\nhttps://apps.apple.com/us/app/quikcard-digital-social-card/id1579777525"
+        let promoImage = UIImage(named: "QuikCardPromo2 3.JPG")
+        let itemsToShare = [promoText, promoImage] as [Any]
+        
+        let activityViewController = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        
+        let popPresenter = activityViewController.popoverPresentationController
+        popPresenter?.sourceView = shareButton
+        popPresenter?.sourceRect = shareButton.bounds
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }
 

@@ -24,6 +24,7 @@
 		6DA8CBA526C07329008FE5D5 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8CBA426C07329008FE5D5 /* Page1ViewController.swift */; };
 		6DA8CBAA26C07330008FE5D5 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8CBA926C07330008FE5D5 /* Page2ViewController.swift */; };
 		6DA8CBAF26C07339008FE5D5 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA8CBAE26C07339008FE5D5 /* Page3ViewController.swift */; };
+		6DD4428226DD7FF50069E951 /* QuikCardPromo2 3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6DD4428126DD7FF50069E951 /* QuikCardPromo2 3.JPG */; };
 		6DE395F226B3A9EF00498903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE395F126B3A9EF00498903 /* AppDelegate.swift */; };
 		6DE395F426B3A9EF00498903 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE395F326B3A9EF00498903 /* SceneDelegate.swift */; };
 		6DE395F626B3A9EF00498903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE395F526B3A9EF00498903 /* ViewController.swift */; };
@@ -79,6 +80,7 @@
 		6DA8CBA426C07329008FE5D5 /* Page1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
 		6DA8CBA926C07330008FE5D5 /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		6DA8CBAE26C07339008FE5D5 /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
+		6DD4428126DD7FF50069E951 /* QuikCardPromo2 3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "QuikCardPromo2 3.JPG"; sourceTree = "<group>"; };
 		6DE395EE26B3A9EF00498903 /* CodedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE395F126B3A9EF00498903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE395F326B3A9EF00498903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				6DA8CB9B26C072DF008FE5D5 /* Walkthrough View Controllers */,
 				6DF5CE4E26B9FD460036C64E /* Fonts */,
 				6DE395FD26B3A9F100498903 /* Assets.xcassets */,
+				6DD4428126DD7FF50069E951 /* QuikCardPromo2 3.JPG */,
 				6D8E5EAA26C760DA004D7585 /* QuikCard1024.jpg */,
 				6DF5CE4326B8DDDE0036C64E /* defaultAavatar.jpeg */,
 				6DE395FF26B3A9F100498903 /* LaunchScreen.storyboard */,
@@ -381,6 +384,7 @@
 				6DF5CE5026B9FD690036C64E /* Staatliches-Regular.ttf in Resources */,
 				6DA8CB7D26BC26D5008FE5D5 /* ProfileItemCollectionViewCell.xib in Resources */,
 				6D9A24EE26BAFC0C00856C69 /* ItemCollectionViewCell.xib in Resources */,
+				6DD4428226DD7FF50069E951 /* QuikCardPromo2 3.JPG in Resources */,
 				6DE395FE26B3A9F100498903 /* Assets.xcassets in Resources */,
 				6DE395F926B3A9EF00498903 /* Main.storyboard in Resources */,
 			);
@@ -707,7 +711,7 @@
 				CODE_SIGN_ENTITLEMENTS = CodedCard/CodedCard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				INFOPLIST_FILE = CodedCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -715,7 +719,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.05;
+				MARKETING_VERSION = 1.08;
 				PRODUCT_BUNDLE_IDENTIFIER = "terence-williams.QuikCard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -733,7 +737,7 @@
 				CODE_SIGN_ENTITLEMENTS = CodedCard/CodedCard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				INFOPLIST_FILE = CodedCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -741,7 +745,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.05;
+				MARKETING_VERSION = 1.08;
 				PRODUCT_BUNDLE_IDENTIFIER = "terence-williams.QuikCard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
