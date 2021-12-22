@@ -47,11 +47,11 @@ class CardHelper{
     }
     
     static func newVersionLaunchCount() -> Int {
-        return UserDefaults.standard.integer(forKey: "newVersionLaunch1")
+        return UserDefaults.standard.integer(forKey: "newVersionLaunch109")
     }
     
     static func updateNewVersionLaunchCount(count: Int) {
-           UserDefaults.standard.set(count, forKey: "newVersionLaunch1")
+           UserDefaults.standard.set(count, forKey: "newVersionLaunch109")
     }
     
     static func hasSeenNotificationPrompt() -> Bool {

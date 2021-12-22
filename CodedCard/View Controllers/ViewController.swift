@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     func promptForReview() {
         //Ask For  Review
         let currentCount = CardHelper.newVersionLaunchCount()
-        if (currentCount == 3 || currentCount == 8 || currentCount == 15 || currentCount == 30){
+        if (currentCount == 2 || currentCount == 6 || currentCount == 9 || currentCount == 30){
             SKStoreReviewController.requestReview()
         }
     }
