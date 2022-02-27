@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import StoreKit
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate {
     
@@ -25,6 +26,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                     .review,
                     .share,
                     .contact,
+                    .restore,
                     .privacy]
         
         let settingsTableViewCell = UINib(nibName: "SettingsTableViewCell", bundle: nil)
@@ -78,6 +80,18 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         case .privacy:
             self.openWebLink(url: "https://www.oaklandsoftwareco.com/privacy")
             break
+        case .restore:
+            SKPaymentQueue.default().restoreCompletedTransactions()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                let alert = UIAlertController(title: "", message: "Previous purchases restored.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { UIAlertAction in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            break
+            
         }
     }
     
@@ -98,6 +112,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             return "Leave us a Review"
         case .privacy:
             return "Privacy Policy"
+        case .restore:
+            return "Restore Purchases"
         }
     }
     
@@ -119,4 +135,5 @@ enum SettingSection: String {
     case review = "review"
     case privacy = "privacy"
     case upgrade = "Upgrade"
+    case restore = "Restore Purchases"
 }
