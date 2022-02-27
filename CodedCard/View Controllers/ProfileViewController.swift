@@ -101,6 +101,16 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshPage),
                                                name: NSNotification.Name(rawValue: QuikValues.refreshProfile.rawValue),
                                                object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeAvatarImage),
+                                               name: NSNotification.Name(rawValue: "changeAvatar"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeTheme),
+                                               name: NSNotification.Name(rawValue: "changeTheme"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeCardBackgroundImage),
+                                               name: NSNotification.Name(rawValue: "changeBackground"),
+                                               object: nil)
     }
     
     //MARK: - Text Field
@@ -194,18 +204,28 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         
+        self.openThemeEditor()
+    }
+    
+    func openThemeEditor() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let themeEditorViewController = storyBoard.instantiateViewController(withIdentifier: "ThemeEditorViewController") as! ThemeEditorViewController
+        let navViewController = UINavigationController(rootViewController: themeEditorViewController)
+        navViewController.navigationBar.prefersLargeTitles = true
+        navViewController.navigationBar.barTintColor = .black
+        navViewController.navigationBar.titleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
+        navViewController.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
+        
+        let overlayController = DTOverlayController(viewController: navViewController)
+        overlayController.overlayHeight = .dynamic(0.4)
+        overlayController.isPanGestureEnabled = false
+        present(overlayController, animated: true, completion: nil)
+    }
+    
+    @objc func changeAvatarImage() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        alert.addAction(UIAlertAction(title: "Take a photo", style: .default, handler: { (UIAlertAction) in
-            self.imagePicker.delegate = self
-            self.imagePicker.allowsEditing = true
-            self.imagePicker.sourceType = .camera
-            self.imagePicker.allowsEditing = true
-            self.imagePicker.modalPresentationStyle = .fullScreen
-            self.present(self.imagePicker, animated: true, completion: nil)
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Choose a photo", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Choose a Photo", style: .default, handler: { (UIAlertAction) in
             self.imagePicker.delegate = self
             self.imagePicker.allowsEditing = true
             self.imagePicker.sourceType = .photoLibrary
@@ -214,12 +234,17 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
             self.present(self.imagePicker, animated: true, completion: nil)
         }))
         
-        alert.addAction(UIAlertAction(title: "Remove photo", style: .default, handler: { (UIAlertAction) in
-            self.profileImageView.image = UIImage(named: "QuikCard1024.jpg")
+        alert.addAction(UIAlertAction(title: "Take a Photo", style: .default, handler: { (UIAlertAction) in
+            self.imagePicker.delegate = self
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .camera
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.modalPresentationStyle = .fullScreen
+            self.present(self.imagePicker, animated: true, completion: nil)
         }))
         
-        alert.addAction(UIAlertAction(title: "Change Theme Color", style: .default, handler: { (UIAlertAction) in
-            self.changeTheme()
+        alert.addAction(UIAlertAction(title: "Remove Photo", style: .default, handler: { (UIAlertAction) in
+            self.profileImageView.image = UIImage(named: "QuikCard1024.jpg")
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -232,7 +257,25 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UICollection
         self.present(alert, animated: true, completion: nil)
     }
     
-    func changeTheme() {
+    @objc func changeCardBackgroundImage() {
+        if CardHelper.plan == .plus {
+            let cardImagePickerViewController = self.storyboard?.instantiateViewController(withIdentifier: "CardImagePickerViewController") as! CardImagePickerViewController
+
+            let overlayController = DTOverlayController(viewController: cardImagePickerViewController)
+            overlayController.overlayHeight = .dynamic(0.6)
+            overlayController.isPanGestureEnabled = true
+            present(overlayController, animated: true, completion: nil)
+            return
+        }
+        
+        //show paywall
+        let paywallViewController = PaywallViewController(nibName: "PaywallViewController", bundle: nil)
+        paywallViewController.modalPresentationStyle = .fullScreen
+        self.present(paywallViewController, animated: true, completion: nil)
+
+    }
+    
+    @objc func changeTheme() {
         let themeViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThemeViewController") as! ThemeViewController
 
         let overlayController = DTOverlayController(viewController: themeViewController)

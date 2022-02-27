@@ -37,7 +37,9 @@ class ThemeViewController: UIViewController, UICollectionViewDataSource, UIColle
                   UIColor.QuikTheme.midnight,
                   UIColor.QuikTheme.coffee,
                   UIColor.QuikTheme.evergreen,
-                  UIColor.QuikTheme.mustard]
+                  UIColor.QuikTheme.mustard,
+                  UIColor.QuikTheme.orange,
+                  UIColor.QuikTheme.yellow]
     }
     
     //MARK: - Collection View

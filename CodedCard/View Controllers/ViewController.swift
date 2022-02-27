@@ -7,6 +7,7 @@
 
 import UIKit
 import StoreKit
+import DTOverlayController
 
 class ViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        showWalkthroughIfNeeded()
+        //showWalkthroughIfNeeded()
         promptForReview()
         if !CardHelper.hasSeenNotificationPrompt() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -55,10 +56,15 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+    
     func promptForReview() {
         //Ask For  Review
         let currentCount = CardHelper.newVersionLaunchCount()
-        if (currentCount == 3 || currentCount == 8 || currentCount == 15 || currentCount == 30){
+        if (currentCount == 2 || currentCount == 5 || currentCount == 12 || currentCount == 18){
             SKStoreReviewController.requestReview()
         }
     }
@@ -81,6 +87,24 @@ class ViewController: UIViewController {
         popPresenter?.sourceView = shareButton
         popPresenter?.sourceRect = shareButton.bounds
         self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func openSettings() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let settingsViewController = storyBoard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+        let navViewController = UINavigationController(rootViewController: settingsViewController)
+        navViewController.navigationBar.prefersLargeTitles = true
+        navViewController.navigationBar.barTintColor = .black
+        navViewController.navigationBar.titleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
+        navViewController.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor : UIColor.white ]
+        
+        let overlayController = DTOverlayController(viewController: navViewController)
+        overlayController.overlayHeight = .dynamic(0.8)
+        overlayController.isPanGestureEnabled = false
+        present(overlayController, animated: true, completion: nil)
     }
 }
 

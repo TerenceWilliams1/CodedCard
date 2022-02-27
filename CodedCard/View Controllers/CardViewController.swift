@@ -18,6 +18,8 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cardBackgroundImageView: UIImageView!
+    @IBOutlet weak var overlayView: UIView!
     
     var sections: [CardSection] = []
     var itemTitle: String? = ""
@@ -40,7 +42,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         avatarImageView.layer.borderWidth = 6
         avatarImageView.layer.borderColor = themeColor.cgColor        
         cardView.backgroundColor = themeColor
-
+//        overlayView.backgroundColor = themeColor
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -52,6 +54,11 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if let imgData = UserDefaults.standard.data(forKey: CardSection.avatar.rawValue) as NSData? {
             if let image = UIImage(data: imgData as Data) {
                 self.avatarImageView.image = image
+            }
+        }
+        if let imgData = UserDefaults.standard.data(forKey: CardSection.background.rawValue) as NSData? {
+            if let image = UIImage(data: imgData as Data) {
+                self.cardBackgroundImageView.image = image
             }
         }
         if CardHelper.valueForKey(key: CardSection.name.rawValue) != "" {

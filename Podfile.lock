@@ -1,20 +1,28 @@
 PODS:
   - DTOverlayController (1.0.2)
+  - KeychainAccess (4.2.2)
   - OneSignal (3.0.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - DTOverlayController
+  - KeychainAccess
   - OneSignal (< 4.0, >= 3.0.0)
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
     - DTOverlayController
+    - KeychainAccess
     - OneSignal
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   DTOverlayController: 7bd26660a6152efabea36f9342182c038d80852e
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   OneSignal: 29b4046637f63c7212785f47f0eb1f2472649285
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: a006e48c786eae343045f40c1628eb1878418a6d
+PODFILE CHECKSUM: b7832153b785258b2d2eab6b44387944f7731d14
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.2

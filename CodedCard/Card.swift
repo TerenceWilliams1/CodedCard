@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import StoreKit
 
-class CardHelper{
+class CardHelper {
     
     static let info = UserDefaults.standard
     
@@ -47,11 +48,11 @@ class CardHelper{
     }
     
     static func newVersionLaunchCount() -> Int {
-        return UserDefaults.standard.integer(forKey: "newVersionLaunch1")
+        return UserDefaults.standard.integer(forKey: "newVersionLaunch1.11")
     }
     
     static func updateNewVersionLaunchCount(count: Int) {
-           UserDefaults.standard.set(count, forKey: "newVersionLaunch1")
+           UserDefaults.standard.set(count, forKey: "newVersionLaunch1.11")
     }
     
     static func hasSeenNotificationPrompt() -> Bool {
@@ -83,10 +84,29 @@ class CardHelper{
             alpha: CGFloat(1.0)
         )
     }
+    
+    
+    //StoreKit
+    static var plan: QuikPlan?
+    static var purchasedProducts: [SKProduct]?
+    
+    static func isQuickPlus() -> Bool {
+        return self.plan == .plus
+    }
+    
+    static func updateQuikPlan(plan: QuikPlan) {
+        self.plan = plan
+    }
+}
+
+enum QuikPlan {
+    case basic
+    case plus
 }
 
 enum CardSection: String {
     case avatar = "avatar"
+    case background = "background"
     case name = "name"
     case title = "title"
     case header = "header"
@@ -169,6 +189,8 @@ extension UIColor {
         static var coffee: UIColor { return UIColor(hexaRGBA: "#C9BB9F")! }
         static var evergreen: UIColor { return UIColor(hexaRGBA: "#3D9776")! }
         static var mustard: UIColor { return UIColor(hexaRGBA: "#EDCC8B")! }
+        static var orange: UIColor { return UIColor(hexaRGBA: "#EA802C")! }
+        static var yellow: UIColor { return UIColor(hexaRGBA: "#E0DE41")! }
 
 
 //        static var purple: UIColor { return UIColor(hex: "#716CB7")! }
